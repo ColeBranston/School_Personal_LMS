@@ -1,0 +1,906 @@
+{
+  "modules": {
+    "01-course-introduction": [
+      {
+        "q": "Which notation does this course use for ER diagrams, including on exams?",
+        "options": ["Chen", "Crow's Foot", "UML database notation", "IDEF1X"],
+        "answer": 2
+      },
+      {
+        "q": "In relational terminology, a row of a table is also called a…",
+        "options": ["Attribute", "Tuple", "Domain", "Relation"],
+        "answer": 1
+      },
+      {
+        "q": "JSON and XML are examples of which kind of data?",
+        "options": ["Structured", "Semi-structured", "Unstructured", "Relational"],
+        "answer": 1,
+        "explain": "Structured = tables/rows. Semi-structured = some structure but flexible (XML, JSON). Unstructured = images, audio, video."
+      },
+      {
+        "q": "Where is the description of a database's data stored?",
+        "options": ["In each application program", "In the system catalog", "In the operating system", "In the backup files"],
+        "answer": 1
+      },
+      {
+        "q": "Two withdrawals hit the same bank account at the same instant and both must debit correctly. Which database challenge is this?",
+        "options": ["Normalization", "Concurrency control", "Data abstraction", "Referential integrity"],
+        "answer": 1
+      },
+      {
+        "q": "What is the order of the course project pipeline?",
+        "options": [
+          "SQL → E-R Model → Load Data → Relational Tables → Web Interface",
+          "E-R Model → Relational Tables (Normalization) → Load Data → SQL → Web Interface",
+          "Web Interface → SQL → E-R Model → Load Data",
+          "Load Data → E-R Model → SQL → Normalization"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How many relations must the course project have at minimum?",
+        "options": ["3", "5", "7", "10"],
+        "answer": 1,
+        "explain": "At least 5 (7+ recommended), with 2 holding a few thousand tuples and 1 holding hundreds."
+      },
+      {
+        "q": "What is the weight of the final exam in SE 3309?",
+        "options": ["20%", "35%", "45%", "50%"],
+        "answer": 2,
+        "explain": "Project & assignments 35%, midterm 20%, final 45%."
+      }
+    ],
+    "02-introduction-to-databases": [
+      {
+        "q": "A database system is…",
+        "options": [
+          "Only the data files",
+          "The DBMS software together with the data (sometimes the applications too)",
+          "Only the application programs",
+          "A spreadsheet"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the defining weakness of a file-based system?",
+        "options": [
+          "It can't store numbers",
+          "Each program defines and manages its own data — there's no central data definition",
+          "It requires a DBMS",
+          "It is always slower than a database"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the DreamHome case study, Sales and Contracts each keep their own PropertyForRent and Client files. What problem does this show?",
+        "options": ["Concurrency", "Data redundancy / duplication", "Data abstraction", "Referential integrity"],
+        "answer": 1
+      },
+      {
+        "q": "The system catalog makes a database system…",
+        "options": ["Self-describing", "Distributed", "Unstructured", "File-based"],
+        "answer": 0,
+        "explain": "Because the structure lives in the catalog, the same DBMS can work with many different databases."
+      },
+      {
+        "q": "Adding a new field to a record doesn't require rewriting the DBMS access programs. This is…",
+        "options": ["Data abstraction", "Program–data independence", "Concurrency control", "A view"],
+        "answer": 1
+      },
+      {
+        "q": "Hiding physical storage details and presenting a conceptual view via a data model is called…",
+        "options": ["Data abstraction", "Normalization", "Redundancy", "Program–data independence"],
+        "answer": 0
+      },
+      {
+        "q": "Which DBMS language specifies data types, structures and constraints?",
+        "options": ["DML", "DDL", "SQL views", "The system catalog"],
+        "answer": 1,
+        "explain": "DDL = Data Definition Language. DML = Data Manipulation Language (select, insert, delete, update)."
+      },
+      {
+        "q": "Which is NOT a benefit of views?",
+        "options": [
+          "Reduces complexity",
+          "Provides a level of security",
+          "Eliminates the need for a DBMS",
+          "Presents a consistent picture even if the underlying database changes"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "In the five components of the DBMS environment, which acts as the bridge between the machine side and the human side?",
+        "options": ["Hardware", "Software", "Data", "Procedures"],
+        "answer": 2,
+        "explain": "Machine side: hardware, software. Bridge: data. Human side: procedures, people."
+      },
+      {
+        "q": "Who manages the physical DBMS and database?",
+        "options": ["Data Administrator (DA)", "Database Administrator (DBA)", "Application programmer", "Naive end user"],
+        "answer": 1,
+        "explain": "The DA manages the organization's data resource; the DBA manages the physical DBMS and database."
+      },
+      {
+        "q": "An end user who writes their own queries is a ____ end user.",
+        "options": ["Naive", "Sophisticated", "Logical", "Physical"],
+        "answer": 1
+      },
+      {
+        "q": "Which generation of database systems introduced relational databases?",
+        "options": ["First", "Second", "Third", "Fourth"],
+        "answer": 1,
+        "explain": "First = hierarchical and network. Second = relational. Third (debated) = object-relational, OO, NoSQL/NewSQL."
+      },
+      {
+        "q": "Which is a disadvantage of DBMSs?",
+        "options": ["Control of data redundancy", "Higher impact of a failure", "Improved security", "Increased concurrency"],
+        "answer": 1
+      },
+      {
+        "q": "In a three-tier architecture, where does business/data-processing logic live?",
+        "options": ["Client", "Application server", "Database server", "Web server"],
+        "answer": 1
+      },
+      {
+        "q": "A four-tier architecture adds which component compared to three-tier?",
+        "options": ["A second database", "A web server between the client and application server", "A file server", "A cache"],
+        "answer": 1
+      },
+      {
+        "q": "What does a distributed DBMS do?",
+        "options": [
+          "Runs only on one machine",
+          "Manages a distributed database and makes the distribution transparent to users",
+          "Replaces the system catalog",
+          "Stores only unstructured data"
+        ],
+        "answer": 1
+      }
+    ],
+    "03-entity-relationship-modeling": [
+      {
+        "q": "Staff, Branch and Client are examples of…",
+        "options": ["Entity occurrences", "Entity types", "Attributes", "Relationship types"],
+        "answer": 1,
+        "explain": "An entity type is a group of objects with the same properties. One specific staff member is an entity occurrence."
+      },
+      {
+        "q": "What is the degree of a relationship?",
+        "options": [
+          "The number of attributes it has",
+          "The number of participating entity types",
+          "Its maximum multiplicity",
+          "The number of occurrences"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Staff registers a client at a branch. What degree is the Registers relationship?",
+        "options": ["Binary", "Ternary", "Quaternary", "Recursive"],
+        "answer": 1
+      },
+      {
+        "q": "Staff (supervisor) supervises Staff (supervisee). This is a…",
+        "options": ["Ternary relationship", "Recursive relationship", "Weak entity", "Fan trap"],
+        "answer": 1,
+        "explain": "Same entity type participating more than once in different roles; role names clarify the purpose."
+      },
+      {
+        "q": "address = street + city + postcode is what kind of attribute?",
+        "options": ["Simple", "Composite", "Multi-valued", "Derived"],
+        "answer": 1
+      },
+      {
+        "q": "telNo [1..3] on Branch is what kind of attribute?",
+        "options": ["Composite", "Derived", "Multi-valued", "Simple"],
+        "answer": 2
+      },
+      {
+        "q": "/totalStaff, shown with a leading slash, is…",
+        "options": ["A primary key", "A derived attribute", "A composite key", "A weak entity"],
+        "answer": 1
+      },
+      {
+        "q": "A candidate key is…",
+        "options": [
+          "Any attribute",
+          "A minimal set of attributes that uniquely identifies each occurrence of an entity type",
+          "Always a single attribute",
+          "The foreign key"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A candidate key made of two or more attributes is a…",
+        "options": ["Composite key", "Primary key", "Alternate key", "Foreign key"],
+        "answer": 0
+      },
+      {
+        "q": "Why is Preference a weak entity type?",
+        "options": [
+          "It has few attributes",
+          "It is existence-dependent on Client — it can't exist without its owner",
+          "It has a composite key",
+          "It participates in a ternary relationship"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Multiplicity is made up of which two restrictions?",
+        "options": [
+          "Cardinality and participation",
+          "Degree and domain",
+          "Primary and foreign keys",
+          "Generalization and specialization"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "\"All branches are managed, but not all staff manage a branch\" describes…",
+        "options": ["Cardinality", "Participation", "Degree", "A chasm trap"],
+        "answer": 1,
+        "explain": "Participation = whether all (mandatory) or some (optional) occurrences participate. Cardinality = the maximum number."
+      },
+      {
+        "q": "Each newspaper advertises many properties and each property may be in many newspapers. This is…",
+        "options": ["1:1", "1:*", "*:*", "Recursive"],
+        "answer": 2
+      },
+      {
+        "q": "What does the multiplicity \"0, 3, 6–8\" mean?",
+        "options": [
+          "Between 0 and 8",
+          "Zero, or three, or six through eight",
+          "Exactly 17",
+          "Minimum 3, maximum 8"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Staff –Has– Division –Operates– Branch, both 1:*. You can't tell which branch SG37 works at. This is a…",
+        "options": ["Chasm trap", "Fan trap", "Weak entity", "Recursive relationship"],
+        "answer": 1,
+        "explain": "Fan trap: the pathway is ambiguous. Fix by restructuring to Division → Branch → Staff."
+      },
+      {
+        "q": "Branch –Has– Staff –Oversees (optional)– Property. Property PA14 has no overseeing staff, so you can't find its branch. This is a…",
+        "options": ["Fan trap", "Chasm trap", "Composite key", "Derived attribute"],
+        "answer": 1,
+        "explain": "Chasm trap: the pathway doesn't exist for some occurrences. Fix by adding Branch –Offers– Property directly."
+      }
+    ],
+    "04-enhanced-er-modeling": [
+      {
+        "q": "Why was the EER model introduced?",
+        "options": [
+          "Basic ER concepts aren't expressive enough for newer, more demanding applications",
+          "To replace SQL",
+          "To store unstructured data",
+          "To speed up queries"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "The superclass/subclass relationship is…",
+        "options": ["One-to-many", "One-to-one", "Many-to-many", "Recursive"],
+        "answer": 1,
+        "explain": "A subclass occurrence and its superclass occurrence are the same real-world object."
+      },
+      {
+        "q": "What are the problems with using only a single AllStaff entity for every kind of staff?",
+        "options": [
+          "Shared attributes are described more than once",
+          "Lots of nulls and no way to model subclass-only relationships",
+          "It needs too many tables",
+          "It can't have a primary key"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What are the problems with using only separate subclasses and no superclass?",
+        "options": [
+          "Lots of nulls",
+          "Shared concepts get described more than once and must be kept consistent",
+          "No primary keys",
+          "Can't express relationships"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Starting with Staff and splitting out Manager, SalesPersonnel and Secretary by their distinguishing characteristics is…",
+        "options": ["Generalization", "Specialization", "Aggregation", "Composition"],
+        "answer": 1,
+        "explain": "Specialization is top-down (maximize differences). Generalization is bottom-up (minimize differences)."
+      },
+      {
+        "q": "Noticing Staff, PrivateOwner and Client all have a number and a name, and pulling those into Person, is…",
+        "options": ["Specialization", "Generalization", "Composition", "Normalization"],
+        "answer": 1
+      },
+      {
+        "q": "In UML, specialization/generalization is drawn with…",
+        "options": [
+          "A hollow diamond",
+          "A filled diamond",
+          "A hollow triangle on the superclass end",
+          "A dashed arrow"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Every Owner must be a PrivateOwner or a BusinessOwner, but never both. Which constraint?",
+        "options": ["{Mandatory, Or}", "{Optional, Or}", "{Mandatory, And}", "{Optional, And}"],
+        "answer": 0
+      },
+      {
+        "q": "Staff may be a Supervisor or a Manager or neither, but not both. Which constraint?",
+        "options": ["{Mandatory, Or}", "{Optional, Or}", "{Mandatory, And}", "{Optional, And}"],
+        "answer": 1
+      },
+      {
+        "q": "The \"And\" in {Mandatory, And} means…",
+        "options": [
+          "Disjoint — at most one subclass",
+          "Nondisjoint — a member can belong to several subclasses",
+          "Every member is in exactly one subclass",
+          "No member is in a subclass"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why does Supervisor exist as a subclass even though it has no attributes of its own?",
+        "options": [
+          "To hold a primary key",
+          "So that it (not every staff member) takes part in the Supervises relationship",
+          "UML requires it",
+          "To store bonuses"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Aggregation is drawn with ____ and composition with ____.",
+        "options": [
+          "a filled diamond; a hollow diamond",
+          "a hollow diamond; a filled diamond",
+          "a triangle; a diamond",
+          "a dashed line; a solid line"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which is true of composition but NOT aggregation?",
+        "options": [
+          "There is a whole and a part",
+          "The part cannot exist without the whole and belongs to exactly one whole",
+          "It is a \"has-a\" relationship",
+          "It's drawn in UML"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Newspaper displays Adverts, and an advert can't exist without its newspaper. This is…",
+        "options": ["Aggregation", "Composition", "Generalization", "A fan trap"],
+        "answer": 1
+      }
+    ],
+    "04-enhanced-entity-relationship-modeling": [
+      {
+        "q": "A Manager has staffNo, name, position, salary from Staff plus mgrStartDate and bonus. This is…",
+        "options": ["Attribute inheritance", "Composition", "A derived attribute", "Normalization"],
+        "answer": 0
+      },
+      {
+        "q": "Which relationship could a single Staff entity NOT express well, motivating a Manager subclass?",
+        "options": [
+          "Branch Has Staff",
+          "Manager Manages Branch — a relationship only managers take part in",
+          "Staff Oversees Property",
+          "Client Holds Lease"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "{Mandatory, And} means every superclass member is in…",
+        "options": ["Exactly one subclass", "Zero or one subclass", "One or more subclasses", "Zero or more subclasses"],
+        "answer": 2
+      },
+      {
+        "q": "{Optional, And} means every superclass member is in…",
+        "options": ["Exactly one subclass", "Zero or one subclass", "One or more subclasses", "Zero or more subclasses"],
+        "answer": 3
+      },
+      {
+        "q": "Person → Staff → Supervisor/Manager is an example of…",
+        "options": [
+          "A shared subclass",
+          "A specialization hierarchy (a subclass with its own subclasses)",
+          "Composition",
+          "A ternary relationship"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A shared subclass is one that…",
+        "options": [
+          "Has more than one superclass and inherits from all of them",
+          "Has no attributes",
+          "Belongs to one superclass only",
+          "Is always optional"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "In the DreamHome EER branch view, the separate POwns and BOwns relationships became…",
+        "options": [
+          "Two weak entities",
+          "A single Owns relationship to a new Owner superclass",
+          "A composition",
+          "A ternary relationship"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Branch Has Staff and Branch Offers PropertyForRent are drawn as aggregations. Which is the whole?",
+        "options": ["Staff", "PropertyForRent", "Branch", "Oversees"],
+        "answer": 2
+      },
+      {
+        "q": "With aggregation, can the part be shared by many wholes?",
+        "options": ["Yes", "No", "Only with composition", "Only if it's a weak entity"],
+        "answer": 0
+      },
+      {
+        "q": "Where does the (E)ER diagram sit in database design?",
+        "options": [
+          "It is the physical model",
+          "It is the conceptual data model, before the logical (relational) model",
+          "It comes after normalization",
+          "It replaces the logical model"
+        ],
+        "answer": 1
+      }
+    ],
+    "05-logical-database-design": [
+      {
+        "q": "Logical database design is tied to a ____ but independent of a ____.",
+        "options": [
+          "DBMS; data model",
+          "specific data model (e.g. relational); particular DBMS and physical details",
+          "programming language; data model",
+          "UML notation; ER model"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the relational model, \"degree\" is ____ and \"cardinality\" is ____.",
+        "options": [
+          "number of rows; number of columns",
+          "number of attributes; number of tuples",
+          "number of keys; number of relations",
+          "number of tables; number of databases"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which is NOT a property of relations?",
+        "options": [
+          "Each cell holds exactly one atomic value",
+          "Every tuple is distinct",
+          "The order of attributes is significant",
+          "All values of an attribute come from the same domain"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "An alternate key is…",
+        "options": [
+          "A foreign key",
+          "Any candidate key not selected as the primary key",
+          "A composite primary key",
+          "A key that can be null"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Entity integrity says…",
+        "options": [
+          "No attribute of the primary key can be null",
+          "Foreign keys must match or be wholly null",
+          "Every attribute must be atomic",
+          "There can be only one candidate key"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Referential integrity says a foreign key value must…",
+        "options": [
+          "Never be null",
+          "Match a candidate key value in its home relation, or be wholly null",
+          "Be the primary key of its own relation",
+          "Be unique"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Is null the same as zero or an empty string?",
+        "options": [
+          "Yes",
+          "No — null is the absence of a value (unknown or not applicable)",
+          "Only for numeric columns",
+          "Only for text columns"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "To map a 1:* relationship, you…",
+        "options": [
+          "Post the \"many\" side's PK into the \"one\" side",
+          "Post the \"one\" side's PK into the \"many\" side as a FK",
+          "Create a new relation",
+          "Merge both entities"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Client States Preference is 1..1 on both sides. How is it mapped?",
+        "options": [
+          "Separate relations with an FK",
+          "Combine into one relation",
+          "A new relation for States",
+          "Arbitrary"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "For a 1:1 relationship mandatory on one side only, which entity is the parent?",
+        "options": [
+          "The one with mandatory participation",
+          "The one with optional participation",
+          "Whichever has more attributes",
+          "Neither — always combine"
+        ],
+        "answer": 1,
+        "explain": "The optional-participation entity is the parent; its PK is copied into the child."
+      },
+      {
+        "q": "To map a *:* relationship you…",
+        "options": [
+          "Post one PK into the other relation",
+          "Create a new relation with both PKs as FKs (together forming the PK), plus the relationship's attributes",
+          "Merge the entities",
+          "Ignore it"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why can't a *:* relationship be mapped with a foreign key in one of the entity relations?",
+        "options": [
+          "It would need many values in one cell, breaking atomicity",
+          "Foreign keys can't be null",
+          "It breaks entity integrity",
+          "It's allowed, just inefficient"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Viewing (clientNo, propertyNo, dateView, comment) has PK clientNo, propertyNo. When would dateView need to join the key?",
+        "options": [
+          "Never",
+          "If a client could view the same property more than once",
+          "If comments are optional",
+          "If propertyNo is null"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "For a {Mandatory, Or} superclass/subclass, the guideline is…",
+        "options": [
+          "One relation with flags",
+          "Two relations",
+          "One relation per combined superclass/subclass",
+          "One for the superclass and one per subclass"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "For a {Mandatory, And} superclass/subclass, the guideline is…",
+        "options": [
+          "One relation with discriminator flags",
+          "Many relations",
+          "Two relations",
+          "No relation"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How is a multi-valued attribute like Branch telNo [1..3] mapped?",
+        "options": [
+          "Keep all numbers in one cell",
+          "A new relation for the attribute with the owner's PK as a FK",
+          "Three columns telNo1, telNo2, telNo3",
+          "Drop it"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the Registers ternary mapping, only Client is on a \"many\" end. What's the PK of Registration?",
+        "options": ["clientNo", "branchNo, staffNo", "clientNo, branchNo, staffNo", "dateJoined"],
+        "answer": 0
+      },
+      {
+        "q": "In the staff view, the optional Supervisor subclass and the Supervises relationship become…",
+        "options": [
+          "A separate Supervisor table",
+          "A recursive supervisorStaffNo FK in Staff",
+          "A composition",
+          "A derived attribute"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  "final": [
+    {
+      "q": "A database is formally a ____ collection of logically related data plus a description of that data.",
+      "options": ["Private", "Shared", "Temporary", "Unstructured"],
+      "answer": 1
+    },
+    {
+      "q": "A company's billing and shipping apps each define their own customer files, which drift out of sync. Which approach caused this?",
+      "options": ["The database approach", "A file-based system", "A distributed DBMS", "A view"],
+      "answer": 1
+    },
+    {
+      "q": "A DBMS's controlled access may include which of these?",
+      "options": [
+        "Security, integrity, concurrency control, recovery control and a user-accessible catalog",
+        "Only a login screen",
+        "Only backups",
+        "Only SQL"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "A registrar should see student grades but HR should see only names and departments. Which DBMS feature fits?",
+      "options": ["Views", "DDL", "Composite keys", "Aggregation"],
+      "answer": 0
+    },
+    {
+      "q": "Instructions for starting/stopping the DBMS and doing backups belong to which DBMS-environment component?",
+      "options": ["Hardware", "Data", "Procedures", "People"],
+      "answer": 2
+    },
+    {
+      "q": "Hosting your database on Amazon RDS with a shared database but separate schemas per tenant is an example of…",
+      "options": ["A cloud database", "A file-based system", "Client-server only", "A hierarchical database"],
+      "answer": 0
+    },
+    {
+      "q": "A solicitor arranges a bid for a buyer, supported by a financial institution. Degree of Arranges?",
+      "options": ["2", "3", "4", "1"],
+      "answer": 2
+    },
+    {
+      "q": "In the ternary Registers relationship, fixing a Staff/Branch pair still allows several Clients. This describes multiplicity of…",
+      "options": [
+        "One entity type when the other n−1 values are fixed",
+        "A binary relationship",
+        "A weak entity",
+        "A derived attribute"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Each staff member oversees zero or more properties; each property is overseen by zero or one staff. This is…",
+      "options": ["1:1", "1:*", "*:*", "Ternary"],
+      "answer": 1
+    },
+    {
+      "q": "Which multiplicity means \"one or many\"?",
+      "options": ["0..1", "1..1", "0..*", "1..*"],
+      "answer": 3
+    },
+    {
+      "q": "A model suggests a relationship between two entities, but for some occurrences the pathway doesn't exist. This is a…",
+      "options": ["Fan trap", "Chasm trap", "Composite attribute", "Generalization"],
+      "answer": 1
+    },
+    {
+      "q": "How do you fix a fan trap?",
+      "options": [
+        "Add more attributes",
+        "Restructure the relationships so the pathway between occurrences is unambiguous",
+        "Delete the middle entity",
+        "Make all relationships optional"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which pair correctly describes the two directions to a superclass/subclass hierarchy?",
+      "options": [
+        "Specialization: bottom-up; generalization: top-down",
+        "Specialization: top-down, maximize differences; generalization: bottom-up, minimize differences",
+        "Both are top-down",
+        "Both are bottom-up"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Every member of a subclass is also a member of the superclass. Must every superclass member be in a subclass?",
+      "options": [
+        "Always",
+        "Only if the participation constraint is mandatory",
+        "Never",
+        "Only if the disjoint constraint is And"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A university Person can be both a Student and an Employee, and every Person is at least one. Which constraint?",
+      "options": ["{Mandatory, Or}", "{Optional, Or}", "{Mandatory, And}", "{Optional, And}"],
+      "answer": 2
+    },
+    {
+      "q": "A Car has Wheels; a wheel can be moved to another car and exists on its own. Which relationship best fits?",
+      "options": ["Composition", "Aggregation", "Generalization", "Recursive"],
+      "answer": 1
+    },
+    {
+      "q": "In the relational model, a domain is…",
+      "options": [
+        "A website",
+        "The set of allowable values for one or more attributes",
+        "A primary key",
+        "A row"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In the Branch instance with 4 columns and 5 rows, what are the degree and cardinality?",
+      "options": ["Degree 5, cardinality 4", "Degree 4, cardinality 5", "Degree 4, cardinality 4", "Degree 9, cardinality 1"],
+      "answer": 1
+    },
+    {
+      "q": "\"Cardinality\" in ER modeling vs the relational model:",
+      "options": [
+        "Same meaning in both",
+        "ER: max relationship occurrences per entity; relational: number of tuples in a relation",
+        "ER: number of rows; relational: number of columns",
+        "It only exists in ER"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A foreign key can reference…",
+      "options": [
+        "Only a different relation",
+        "A candidate key of some relation, including the same relation",
+        "Only an alternate key",
+        "Only a derived attribute"
+      ],
+      "answer": 1,
+      "explain": "e.g. supervisorStaffNo in Staff references Staff(staffNo)."
+    },
+    {
+      "q": "A composite foreign key has one part filled and one part null. Is this allowed under referential integrity?",
+      "options": [
+        "Yes",
+        "No — it must match fully or be wholly null",
+        "Only if the PK is null",
+        "Only in views"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In the PK/FK mechanism, the relation whose key gets copied is the ____, and the one receiving it is the ____.",
+      "options": ["child; parent", "parent; child", "owner; weak entity", "superclass; subclass"],
+      "answer": 1
+    },
+    {
+      "q": "What is the correct order of the first steps for deriving relations?",
+      "options": [
+        "*:* → 1:* → strong entities",
+        "Strong entities → weak entities → 1:* → 1:1 → 1:1 recursive → superclass/subclass → *:* → complex → multi-valued attributes",
+        "Multi-valued attributes first",
+        "Weak entities → strong entities → *:*"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "When mapping a strong entity with composite attribute name (fName, lName), the relation includes…",
+      "options": ["name as one column", "Only the simple parts fName and lName", "No name", "A separate Name relation"],
+      "answer": 1
+    },
+    {
+      "q": "Why can't a weak entity's primary key be finalized when it is first mapped?",
+      "options": [
+        "It has no attributes",
+        "Its key is derived partly or fully from its owner, which needs the relationship mapped first",
+        "Weak entities never have keys",
+        "Because of normalization"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Every client must be registered by a staff member (1..1 on the Staff side). What does this mean for staffNo in Client?",
+      "options": ["It can be null", "It should be NOT NULL", "It should be the PK", "It should be removed"],
+      "answer": 1
+    },
+    {
+      "q": "Most cars are used by staff, but only a few staff use cars (optional on both sides). Which mapping avoids lots of nulls?",
+      "options": [
+        "Put carNo in Staff",
+        "Make Staff the parent and post staffNo into Car",
+        "Merge Staff and Car",
+        "Create no relation"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "For a 1:1 recursive relationship optional on both sides, the mapping is…",
+      "options": [
+        "A single relation with two copies of the PK",
+        "A new relation to represent the relationship",
+        "Combine with another entity",
+        "Drop the relationship"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "For an {Optional, Or} superclass/subclass, the guideline is…",
+      "options": [
+        "One relation with flags",
+        "Two relations",
+        "One relation per combined superclass/subclass",
+        "One for the superclass plus one per subclass"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "For an {Optional, And} superclass/subclass, the guideline is…",
+      "options": [
+        "One relation",
+        "Two relations: one for the superclass, one for all subclasses combined with discriminators",
+        "Many relations",
+        "None"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In a complex (n-ary) relationship mapping, which foreign keys generally form part of the primary key?",
+      "options": [
+        "Those on a \"one\" end",
+        "Those on a \"many\" end",
+        "None of them",
+        "Only relationship attributes"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Each phone number belongs to exactly one branch. In Telephone (telNo, branchNo), what is the PK?",
+      "options": ["telNo alone", "branchNo alone", "telNo, branchNo", "A surrogate ID"],
+      "answer": 0,
+      "explain": "Because telNo is an alternate key of Branch, it can be the PK alone. If numbers could be shared, the key would be telNo, branchNo."
+    },
+    {
+      "q": "In the final staff-view relations, why is ownerNo in PropertyForRent awkward in SQL?",
+      "options": [
+        "It's null",
+        "It references two relations (PrivateOwner and BusinessOwner), but an SQL FK can only reference one table",
+        "It's a derived attribute",
+        "It violates entity integrity"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In Lease, deposit and duration are…",
+      "options": ["Stored columns", "Derived attributes computed from rent and lease dates", "Foreign keys", "Alternate keys"],
+      "answer": 1
+    },
+    {
+      "q": "After deriving relations, what is the next step to validate them?",
+      "options": ["Normalization", "Specialization", "Building views", "Writing the web interface"],
+      "answer": 0
+    }
+  ]
+}

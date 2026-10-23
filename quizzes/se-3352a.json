@@ -1,0 +1,1088 @@
+{
+  "modules": {
+    "01-intro-to-sdlc-and-agile": [
+      {
+        "q": "What is the objective of software engineering, as defined in the course?",
+        "options": [
+          "To write code as quickly as possible",
+          "To move from a vaguely described real system to a very specific computerized system",
+          "To document every requirement before any design starts",
+          "To replace business analysts with developers"
+        ],
+        "answer": 1,
+        "explain": "SE moves from a real system described ambiguously in plain language to a computerized system written very specifically in a programming language."
+      },
+      {
+        "q": "Which three broad activities take you from the real system to the computerized system?",
+        "options": [
+          "Planning → Coding → Shipping",
+          "Requirements & Analysis → System & Object Design → Implementation & Testing",
+          "Elicitation → Prototyping → Retirement",
+          "Build → Use → Fix"
+        ],
+        "answer": 1,
+        "explain": "The three broad activities are Requirements & Analysis, System & Object Design, then Implementation & Testing. Real projects loop back rather than moving linearly."
+      },
+      {
+        "q": "In the SDLC, which phase answers the question \"What needs to be done?\"",
+        "options": [
+          "System Design + Object Design",
+          "Implementation",
+          "Requirement Elicitation + Requirements Analysis",
+          "Testing"
+        ],
+        "answer": 2,
+        "explain": "Elicitation + Analysis = what; Design = how; Implementation = do it; Testing = verify it does what it's supposed to."
+      },
+      {
+        "q": "Why is the SDLC called a cycle rather than a line?",
+        "options": [
+          "Because it is repeated once per year",
+          "Because the real process loops back between stages rather than running straight through once",
+          "Because testing always happens first",
+          "Because each phase is optional"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Requirements Engineering is made up of which two activities?",
+        "options": [
+          "Requirements Elicitation + Requirements Analysis",
+          "System Design + Object Design",
+          "Prototyping + Testing",
+          "Business Analysis + Architecture Design"
+        ],
+        "answer": 0,
+        "explain": "Requirements Engineering = Elicitation + Analysis. It overlaps heavily with Business Analysis when the solution is to create or update software."
+      },
+      {
+        "q": "Which development model is described as an ad hoc loop with no planning or design phase?",
+        "options": ["Waterfall model", "Incremental model", "Build-and-fix model", "Evolutionary prototyping"],
+        "answer": 2,
+        "explain": "Build-and-fix: Build → Use → Fix → Use → … → Retirement."
+      },
+      {
+        "q": "When does the waterfall model actually work well?",
+        "options": [
+          "When requirements are expected to change frequently",
+          "When the team has never worked in the domain before",
+          "When you are confident you fully understand the requirements, or the client has given them unambiguously",
+          "When the system must be delivered in short releases"
+        ],
+        "answer": 2,
+        "explain": "Its two problems: understanding of the problem may stay unclear until late, and the problem itself may change over time."
+      },
+      {
+        "q": "In the incremental model, each new increment is layered on top of a shared…",
+        "options": ["prototype", "kernel", "backlog", "specification"],
+        "answer": 1
+      },
+      {
+        "q": "What distinguishes evolutionary prototyping from throw-away prototyping?",
+        "options": [
+          "Evolutionary prototypes are drawn on paper",
+          "Each system version is built with the intention of evolving into the next, rather than being discarded",
+          "Evolutionary prototyping skips the requirements phase entirely",
+          "Evolutionary prototypes are only used for technical feasibility"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which pair of process models does the course say are, from a process point of view, already agile methods?",
+        "options": [
+          "Waterfall and build-and-fix",
+          "Evolutionary prototyping and the incremental model",
+          "Waterfall and incremental",
+          "Build-and-fix and evolutionary prototyping"
+        ],
+        "answer": 1,
+        "explain": "Agile methods reduce risk by delivering software in short releases — evolutionary prototyping and incremental already do that."
+      },
+      {
+        "q": "Which is NOT one of the four Agile Manifesto value pairs?",
+        "options": [
+          "Individuals and interactions over processes and tools",
+          "Working software over comprehensive documentation",
+          "Following a plan over responding to change",
+          "Customer collaboration over contract negotiation"
+        ],
+        "answer": 2,
+        "explain": "It's the other way round: responding to change over following a plan."
+      },
+      {
+        "q": "According to the Agile principles, what is the primary measure of progress?",
+        "options": ["Story points completed", "Working software", "Documentation coverage", "Number of releases"],
+        "answer": 1
+      },
+      {
+        "q": "The Agile principle of \"simplicity\" is described as…",
+        "options": [
+          "Using the simplest programming language available",
+          "Maximizing the amount of work not done",
+          "Having only one developer per feature",
+          "Avoiding all documentation"
+        ],
+        "answer": 1
+      }
+    ],
+    "02-requirements-elicitation": [
+      {
+        "q": "Which definition of a requirement matches the course?",
+        "options": [
+          "A line of code that must compile",
+          "A feature the system must have, or a constraint it must satisfy, to be accepted by the client",
+          "A test case written by QA",
+          "A deadline set by the project manager"
+        ],
+        "answer": 1,
+        "explain": "BABOK v3 frames it more broadly as a usable representation of a need. At its core, a requirement addresses a problem or an opportunity."
+      },
+      {
+        "q": "MoSCoW analysis is a technique for…",
+        "options": ["Requirements traceability", "Requirements prioritization", "Requirements elicitation", "Estimating story points"],
+        "answer": 1,
+        "explain": "Must have / Should have / Could have / Won't have."
+      },
+      {
+        "q": "BABOK v3 groups requirements into which four categories?",
+        "options": [
+          "Functional, non-functional, technical, legal",
+          "Business, stakeholder, solution, transition",
+          "Project, quality, program, transition",
+          "Epic, feature, story, task"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "\"Increase revenue by accepting credit-card payments before Dec. 31st\" is an example of a…",
+        "options": ["Business requirement", "Functional requirement", "Transition requirement", "Stakeholder requirement"],
+        "answer": 0,
+        "explain": "Business requirements are high-level organizational goals and should be measurable and time-bound."
+      },
+      {
+        "q": "Solution requirements split into which two categories?",
+        "options": [
+          "Business and stakeholder",
+          "Functional and non-functional",
+          "Transition and migration",
+          "Must-have and nice-to-have"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "\"The system must be deployed as a Docker container\" is what type of requirement?",
+        "options": ["Functional", "Business", "Transition", "Stakeholder"],
+        "answer": 2,
+        "explain": "Transition requirements describe how the solution is deployed/released — temporary capabilities like migration, data conversion and training."
+      },
+      {
+        "q": "\"Ability to search by product code, name, or category\" is a…",
+        "options": ["Non-functional requirement", "Functional requirement", "Business requirement", "Transition requirement"],
+        "answer": 1,
+        "explain": "FRs describe required behaviours of the solution, usually from the system's perspective."
+      },
+      {
+        "q": "\"Restore service within 1 hour of an outage\" describes which quality attribute?",
+        "options": ["Availability", "Reliability", "Recoverability", "Capacity"],
+        "answer": 2
+      },
+      {
+        "q": "\"Support 1,000 simultaneous users and keep 5 years of historical data\" is which NFR attribute?",
+        "options": ["Scalability", "Capacity", "Maintainability", "Interoperability"],
+        "answer": 1,
+        "explain": "Capacity = the amount of data or services the solution can manage. Scalability is about growing to meet increased demand (e.g. 2× volume)."
+      },
+      {
+        "q": "Which is NOT another name for non-functional requirements?",
+        "options": ["Service-level requirements", "Quality requirements", "Supplementary requirements", "Transition requirements"],
+        "answer": 3
+      },
+      {
+        "q": "Which elicitation technique is especially good for uncovering tacit requirements people struggle to put into words?",
+        "options": ["Questionnaires and surveys", "Observation (job shadowing)", "Document analysis", "Brainstorming"],
+        "answer": 1
+      },
+      {
+        "q": "You need input from 5,000 users quickly, including demographic data. Which technique fits best?",
+        "options": ["Interviews", "Focus group", "Questionnaires and surveys", "Facilitated workshop"],
+        "answer": 2,
+        "explain": "Surveys quickly solicit information from a large number of users using closed- or open-ended questions."
+      },
+      {
+        "q": "Which technique convenes stakeholders in a structured session to reconcile differences and reach consensus?",
+        "options": ["Focus group", "Facilitated workshop", "Interview", "Interface analysis"],
+        "answer": 1,
+        "explain": "Focus groups gather prequalified participants for qualitative attitudes/expectations; facilitated workshops aim at consensus and resolving conflicts."
+      },
+      {
+        "q": "What is the main risk of document analysis?",
+        "options": [
+          "It takes too many stakeholders",
+          "Working from documentation that is outdated or inaccurate",
+          "It only works for system-replacement projects",
+          "It cannot be used early in a project"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Interface analysis primarily examines…",
+        "options": [
+          "The visual design of screens",
+          "How users, processes and other system components interact, including each interfacing system's input/output needs",
+          "The look and feel of competitor products",
+          "Stakeholders' emotional reactions to a prototype"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why record who said what during interviews?",
+        "options": [
+          "For payroll purposes",
+          "For traceability and conflict resolution",
+          "So the interview can be structured",
+          "To satisfy the Agile Manifesto"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which is NOT one of the elicitation success factors?",
+        "options": ["Preparation", "Domain knowledge", "Active stakeholder engagement", "Writing the code early"],
+        "answer": 3,
+        "explain": "The five: preparation, active stakeholder engagement, defined business/organizational need, domain knowledge, and a plan for the elicitation."
+      },
+      {
+        "q": "In an adaptive (agile) life cycle, when does elicitation happen?",
+        "options": [
+          "Only at the start, until the solution is fully defined",
+          "Continuously, alongside analysis, one iteration at a time",
+          "Only after the product is released",
+          "Never — agile skips elicitation"
+        ],
+        "answer": 1,
+        "explain": "Predictive: as early as possible, producing formal specs. Adaptive: continuous, producing lightweight docs like user stories / backlog."
+      }
+    ],
+    "03-requirements-analysis": [
+      {
+        "q": "What does Requirements Analysis (BABOK: Specify and Model Requirements) produce?",
+        "options": [
+          "Working code",
+          "Specifications and models representing the elicitation results",
+          "Test cases only",
+          "A project budget"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the course's framing, verifying requirements makes sure they meet ____, while validating makes sure they satisfy ____.",
+        "options": [
+          "the business goals; the stakeholders' needs",
+          "the stakeholders' needs; the business goals",
+          "the code standards; the test cases",
+          "the budget; the schedule"
+        ],
+        "answer": 1,
+        "explain": "Verify → stakeholders' needs. Validate → business goals."
+      },
+      {
+        "q": "When should traceability information be included?",
+        "options": [
+          "After the system is deployed",
+          "Only during testing",
+          "While creating the models/artifacts, not afterwards",
+          "Only if the client asks"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Starting from a requirement, you want to find every test case and design element built on it. That's…",
+        "options": ["Backward traceability", "Forward traceability", "Bidirectional traceability", "Progressive decomposition"],
+        "answer": 1,
+        "explain": "Forward = everything that depends on it. Backward = everything it depended on (its sources). Bidirectional = both."
+      },
+      {
+        "q": "What is the purpose of a requirements glossary?",
+        "options": [
+          "To list all the developers on the project",
+          "To limit the vocabulary and reduce ambiguity",
+          "To track bugs",
+          "To prioritize requirements"
+        ],
+        "answer": 1,
+        "explain": "It defines business-specific terms and links synonyms (e.g. customer/client/shopper). CoreX takes it further as a controlled vocabulary with no synonyms."
+      },
+      {
+        "q": "Which are the five CoreX models?",
+        "options": [
+          "Domain, workflow, data (entity), business rules, conceptual UI design",
+          "Use case, class, sequence, state, activity",
+          "Epic, feature, story, task, sub-task",
+          "Business, stakeholder, solution, transition, quality"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Which CoreX model is the only one that is NOT visual?",
+        "options": ["Domain model", "Workflow model", "Business rules model", "Data model"],
+        "answer": 2
+      },
+      {
+        "q": "Which CoreX model is the only one tied to a target platform (GUI, touch, speech, IVR)?",
+        "options": ["Domain model", "Conceptual user interface design", "Data model", "Workflow model"],
+        "answer": 1
+      },
+      {
+        "q": "The lecture's rule of thumb for progressive decomposition is…",
+        "options": [
+          "Unlimited levels, 1–2 elements each",
+          "Up to three levels, with 4 or 5 elements at each level",
+          "Exactly one level with 20 elements",
+          "Ten levels with 3–8 elements each"
+        ],
+        "answer": 1,
+        "explain": "The CoreX reading says Level 1 ≈ 3–8 concepts, each decomposed into another 3–8; deeper levels can grow (10–15) but not excessively."
+      },
+      {
+        "q": "Which tool is most popular for building the domain model?",
+        "options": ["Mind maps", "Sequence diagrams", "Gantt charts", "Traceability matrices"],
+        "answer": 0
+      },
+      {
+        "q": "Where does the scope of the application get drawn in CoreX?",
+        "options": [
+          "In the business rules model",
+          "In the domain model — the covered region is shaded, everything outside is out of scope",
+          "In the data model",
+          "In the traceability matrix"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "The workflow model models the system's ____, while the data model models its ____.",
+        "options": ["structure; behaviour", "behaviour; structure", "scope; rules", "UI; database"],
+        "answer": 1,
+        "explain": "Workflow = behaviour (simplified UML activity diagram). Data = structure (simplified class/ER diagram)."
+      },
+      {
+        "q": "In a CoreX workflow model, which symbol is \"not likely to be needed at this level\"?",
+        "options": ["Decision (diamond)", "Activity (rounded box)", "Join / Fork (thick bar)", "Start (filled circle)"],
+        "answer": 2
+      },
+      {
+        "q": "In the workflow model, how should an activity be named?",
+        "options": [
+          "As a noun only, e.g. \"Groups\"",
+          "As a verb + noun, e.g. \"Create groups\"",
+          "As a role, e.g. \"Instructor\"",
+          "As a screen name, e.g. \"GroupPage\""
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In CoreX's NAVA scheme, verbs and adverbs go into which model?",
+        "options": ["Entity/data model", "Workflow model", "Business rules model", "Domain model"],
+        "answer": 1,
+        "explain": "Nouns + adjectives → entity/data model (tables, fields). Verbs + adverbs → workflow model (buttons, links, command options)."
+      },
+      {
+        "q": "In CoreX's entity model rules, how are relationships and entities expressed?",
+        "options": [
+          "Entities singular, relationships one-to-one",
+          "All entities are plural and all relationships are many-to-many; cardinality goes in the business rules model",
+          "Cardinality is shown on every relationship line",
+          "Only inheritance relationships are allowed"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "\"Loans of $100,000 or more must be approved by a senior officer\" belongs in which model?",
+        "options": ["Data model", "Workflow model", "Business rules model", "Domain model"],
+        "answer": 2,
+        "explain": "Business rules cross-bind data, workflow and UI so the right people do the right activities on the right data at the right time."
+      },
+      {
+        "q": "Mapping CoreX to MVC: the Controller corresponds to…",
+        "options": [
+          "The entity model",
+          "The user interface",
+          "The workflow model + business rules model",
+          "The domain model"
+        ],
+        "answer": 2,
+        "explain": "Model ≈ entity model, Controller ≈ workflow + business rules, View ≈ user interface."
+      },
+      {
+        "q": "Work requirements in CoreX come from which technique?",
+        "options": ["Job analysis and design (JAD)", "MoSCoW", "INVEST", "Brainstorming"],
+        "answer": 0,
+        "explain": "JAD defines a job's KRAs, KPIs, KTs and competencies."
+      }
+    ],
+    "04-work-items": [
+      {
+        "q": "What is the correct hierarchy of work items, from largest to smallest?",
+        "options": [
+          "Feature → Epic → User Story → Task",
+          "Epic → Feature → User Story → Task/Sub-task",
+          "User Story → Epic → Feature → Task",
+          "Epic → User Story → Feature → Task"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the online-store example, \"Shopping Cart\" is a(n)…",
+        "options": ["Epic", "Feature", "User story", "Task"],
+        "answer": 1,
+        "explain": "Online-Store is the epic, Shopping Cart is the feature, and \"As a shopper I would like to delete an item from my cart\" is a user story."
+      },
+      {
+        "q": "Which level of the work-item hierarchy is optional — some teams skip it?",
+        "options": ["Epic", "Feature", "User story", "None of them"],
+        "answer": 1
+      },
+      {
+        "q": "An epic can be seen as either a logical grouping of related user stories or…",
+        "options": [
+          "a technical sub-task",
+          "a big user story that needs to be broken down",
+          "an acceptance test",
+          "a non-functional requirement"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which level of work items is outside the scope of SE 3352?",
+        "options": ["Epics", "Features", "User stories", "Tasks / sub-tasks"],
+        "answer": 3
+      },
+      {
+        "q": "Which is the user story template?",
+        "options": [
+          "The system shall ⟨function⟩ when ⟨condition⟩.",
+          "As a ⟨type of user⟩, I want ⟨goal⟩ so that ⟨some reason⟩.",
+          "Given ⟨context⟩, when ⟨event⟩, then ⟨outcome⟩.",
+          "IF ⟨condition⟩ THEN ⟨rule⟩."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the Definition of Done for a user story?",
+        "options": [
+          "The date the story is due",
+          "The list of conditions (acceptance test) the story must meet to count as complete",
+          "The developer assigned to the story",
+          "The estimate in story points"
+        ],
+        "answer": 1,
+        "explain": "It guides testing and is what makes a story Testable under INVEST. Writing it surfaces hidden prerequisites (e.g. account + login for RSS)."
+      },
+      {
+        "q": "What does the \"N\" in INVEST stand for, and what does it mean?",
+        "options": [
+          "Necessary — the story is legally required",
+          "Negotiable — captures the essence of the need and leaves room for conversation, not a contract",
+          "Numbered — each story has an ID",
+          "New — the story hasn't been built before"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Per INVEST, how small should a story be?",
+        "options": ["Finishable in about 3–4 days", "Finishable in one hour", "Finishable in one release (3 months)", "Exactly one line of code"],
+        "answer": 0
+      },
+      {
+        "q": "A story is ____ if it can be released without depending on other stories.",
+        "options": ["Estimable", "Independent", "Valuable", "Testable"],
+        "answer": 1
+      },
+      {
+        "q": "Why might you write user stories instead of use cases early in an agile project?",
+        "options": [
+          "Use cases are not allowed in agile",
+          "Use cases are formal analysis models, and the detail needed to write them often isn't available yet",
+          "User stories are more detailed than use cases",
+          "User stories replace testing"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "From Mike Cohn's example backlogs, which statement is true?",
+        "options": [
+          "Every example story passes all of INVEST",
+          "Non-functional requirements can also be written as user stories",
+          "The only valid role is \"user\"",
+          "Stories must never contain open questions"
+        ],
+        "answer": 1,
+        "explain": "E.g. a user wanting fast responses or Unicode support. Roles also go beyond \"user\" — editor, admin, trainer, even a search engine."
+      },
+      {
+        "q": "Which is NOT one of the ways the course says you can look at user stories?",
+        "options": [
+          "A tool for requirements elicitation",
+          "One of the models used in requirements analysis",
+          "A project management tool",
+          "A replacement for all non-functional requirements"
+        ],
+        "answer": 3
+      }
+    ],
+    "05-analytical-skills": [
+      {
+        "q": "What is analytical skill, as defined in the course?",
+        "options": [
+          "The ability to write code without bugs",
+          "The ability to deconstruct information into smaller categories in order to draw conclusions",
+          "The ability to think quickly under pressure",
+          "The ability to imagine what is not there"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "According to Richard J. Heuer Jr., how do analysts learn to think analytically?",
+        "options": [
+          "By reading textbooks",
+          "By doing — it's a skill that improves with practice",
+          "It is innate and cannot be learned",
+          "By attending lectures"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Caroselli's three critical thinking categories are…",
+        "options": [
+          "Analytical, creative, quick",
+          "Logical, emotional, intuitive",
+          "Inductive, deductive, abductive",
+          "Linear, circular, random"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Which thinking category contemplates \"what is not there\"?",
+        "options": ["Analytical thinking", "Creative thinking", "Quick thinking", "Critical thinking"],
+        "answer": 1,
+        "explain": "Analytical = what IS there (linear, logical). Creative = what is NOT there (non-linear)."
+      },
+      {
+        "q": "What does the course say about quick thinking?",
+        "options": [
+          "It is sufficient on its own",
+          "Speed is necessary but not sufficient — it must be backed by analytical or creative thought",
+          "It should always be avoided",
+          "It is the same as creative thinking"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "The word \"critical\" comes from the Greek krisis, meaning…",
+        "options": ["to judge harshly", "to separate", "to create", "to decide quickly"],
+        "answer": 1
+      },
+      {
+        "q": "Organizing everything you see in a picture into a 3-level hierarchy practices the same skill as building which model?",
+        "options": ["Business rules model", "Domain model", "Traceability matrix", "Storyboard"],
+        "answer": 1
+      },
+      {
+        "q": "In the ATM class diagram exercise, Savings Account and Current Account are most naturally grouped as…",
+        "options": [
+          "Unrelated entities",
+          "Kinds of Account (inheritance)",
+          "Attributes of Bank",
+          "Workflow activities"
+        ],
+        "answer": 1,
+        "explain": "Both are types of Account, which groups them into one level of the simplified data model."
+      },
+      {
+        "q": "Coming up with three different ways to break \"Fill Order\" into sub-steps practices decomposition for which model?",
+        "options": ["Workflow model", "Data model", "Domain model", "Glossary"],
+        "answer": 0
+      },
+      {
+        "q": "Describing LinkedIn in terms of epics, features and user stories practices…",
+        "options": [
+          "Organizing concepts into the work-item hierarchy",
+          "Writing business rules",
+          "Building a traceability matrix",
+          "Drawing a storyboard"
+        ],
+        "answer": 0
+      }
+    ],
+    "06-prototyping": [
+      {
+        "q": "Steve McMenamin's quote \"Prototypes are requirements bait\" means…",
+        "options": [
+          "Prototypes trick stakeholders into signing contracts",
+          "Stakeholders react readily to something concrete, which surfaces the real requirements",
+          "Prototypes should replace requirements documents",
+          "Prototypes must be production quality"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which is NOT one of the uses of a prototype listed in the course?",
+        "options": [
+          "Requirements capture",
+          "Conceptual prototyping",
+          "Experimental prototyping (technical feasibility)",
+          "Replacing acceptance testing"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "Why generate several sacrificial (throw-away) candidate solutions?",
+        "options": [
+          "To give developers more work",
+          "One candidate isn't enough to open your mind; comparing many reveals the real requirements",
+          "Because the first prototype is always wrong",
+          "To choose the cheapest one immediately"
+        ],
+        "answer": 1,
+        "explain": "\"If you want to have a good idea, have lots of ideas.\" — Linus Pauling"
+      },
+      {
+        "q": "How much should a low-fidelity sketch show?",
+        "options": [
+          "Only the main screen",
+          "As much of the business as is needed to understand the problem — the wider ecosystem, not just a screen",
+          "Only the database",
+          "Only the final visual design"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the customs example, which is the wireframe?",
+        "options": [
+          "A drawing of a truck approaching a scanner and an officer deciding",
+          "A screen with Truck ID, Manifest ID, Origin, Destination, contents and a \"Stop and Inspect\" button",
+          "A video of the border crossing",
+          "A mind map of customs concepts"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A sequence of panels showing a candidate solution in use, scene by scene with text under each, is a…",
+        "options": ["Mind map", "Storyboard", "Process model", "Wireframe"],
+        "answer": 1,
+        "explain": "Borrowed from film. Example: the home security solution with Brad and Janet."
+      },
+      {
+        "q": "Which prototype type combines drawing and text, branching out from one central concept?",
+        "options": ["Storyboard", "Mind map", "Process model", "Hi-fi prototype"],
+        "answer": 1
+      },
+      {
+        "q": "Why is a process model good for presenting a candidate solution?",
+        "options": [
+          "It contains all business rules",
+          "Its notation (rectangles + arrows) is simple enough that almost any stakeholder can grasp it immediately",
+          "It is the only model that can be usability tested",
+          "It replaces the data model"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "An LMS dashboard designed in Figma that looks real but doesn't work is a…",
+        "options": [
+          "Low-fidelity prototype",
+          "Presentation (non-functional) hi-fi prototype",
+          "Functional hi-fi prototype",
+          "Storyboard"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is vibe coding?",
+        "options": [
+          "Pair programming with music",
+          "Describing desired behaviour to an AI coding assistant, generating a working version, and refining iteratively",
+          "Writing code without tests",
+          "Designing every class and API up front"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which caveat does the course give about vibe-coded prototypes?",
+        "options": [
+          "They are production-ready",
+          "They are a proof of concept only — needing significant re-engineering for production — and you shouldn't send private data/ideas to an LLM without a reliable privacy agreement",
+          "They can't be shown to stakeholders",
+          "They must be written in Python"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which question does the course suggest asking stakeholders about a prototype?",
+        "options": [
+          "How many lines of code is this?",
+          "Is this addressing all of the problem?",
+          "What color should the buttons be?",
+          "Who should we hire?"
+        ],
+        "answer": 1,
+        "explain": "Others: why would this solve your problem? how would it affect the rest of your business? does it suggest some other solution?"
+      }
+    ]
+  },
+  "final": [
+    {
+      "q": "A hospital asks for software but can only describe its problem vaguely. Moving from that description to a precise program is…",
+      "options": ["The objective of software engineering", "Requirements traceability", "The build-and-fix model", "A transition requirement"],
+      "answer": 0
+    },
+    {
+      "q": "A client hands you a complete, unambiguous spec for a payroll system that won't change. Which model is most defensible?",
+      "options": ["Build-and-fix", "Waterfall", "Sacrificial prototyping", "Vibe coding"],
+      "answer": 1,
+      "explain": "Waterfall works when you're confident you fully understand the requirements or they've been given unambiguously."
+    },
+    {
+      "q": "The SDLC phase System Design + Object Design answers which question?",
+      "options": ["What needs to be done?", "How would it be done?", "Is it doing what it's supposed to?", "Who pays for it?"],
+      "answer": 1
+    },
+    {
+      "q": "Which Agile principle conflicts most with a team that only demos software once a year?",
+      "options": [
+        "Deliver working software frequently (weeks, not months)",
+        "Maintain a sustainable pace",
+        "Simplicity",
+        "Self-organizing teams"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "\"The LMS must authenticate all users via SSO.\" What type of requirement and attribute is this?",
+      "options": [
+        "Functional — search",
+        "Non-functional — security",
+        "Transition — migration",
+        "Business — revenue"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "\"The LMS must stay usable when enrolment doubles next year while still meeting performance targets.\" Which NFR attribute?",
+      "options": ["Capacity", "Scalability", "Availability", "Recoverability"],
+      "answer": 1
+    },
+    {
+      "q": "\"Instructors must be trained on the new grading module, and old grades must be migrated before launch.\" This is a…",
+      "options": ["Stakeholder requirement", "Transition requirement", "Functional requirement", "Business requirement"],
+      "answer": 1
+    },
+    {
+      "q": "\"Mean time between failures shall not exceed X\" describes…",
+      "options": ["Reliability", "Availability", "Maintainability", "Data integrity"],
+      "answer": 0
+    },
+    {
+      "q": "\"Prompt users to confirm financial transactions after entering details\" is an example of which attribute?",
+      "options": ["Security", "Usability", "Interoperability", "Capacity"],
+      "answer": 1
+    },
+    {
+      "q": "Which requirement category provides the basis for identifying solution requirements by expressing the needs of a specific group?",
+      "options": ["Business requirements", "Stakeholder requirements", "Transition requirements", "Program requirements"],
+      "answer": 1
+    },
+    {
+      "q": "PMI adds project, quality and program requirements. How does the course treat them?",
+      "options": [
+        "As the most important requirements",
+        "As part of project/program work owned by the PM, not the requirements process",
+        "As types of non-functional requirement",
+        "As a replacement for BABOK categories"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "You're replacing a 15-year-old registration system and want to keep what works and drop what doesn't. Best technique?",
+      "options": ["Analyzing existing systems", "Analyzing similar systems", "Brainstorming", "Questionnaires"],
+      "answer": 0
+    },
+    {
+      "q": "Warehouse staff can't explain how they actually pick orders — they \"just know.\" Best technique?",
+      "options": ["Survey", "Observation (job shadowing)", "Document analysis", "Interface analysis"],
+      "answer": 1
+    },
+    {
+      "q": "Your system must exchange data with the provincial health registry. Which technique identifies its input/output needs and interoperability issues?",
+      "options": ["Focus group", "Interface analysis", "Storyboarding", "Mind mapping"],
+      "answer": 1
+    },
+    {
+      "q": "Sales and Finance disagree on the discount workflow. You need them to reach consensus early. Best technique?",
+      "options": ["Facilitated workshop", "Questionnaire", "Observation", "Document analysis"],
+      "answer": 0
+    },
+    {
+      "q": "An interview where questions are prepared in advance but you follow up freely based on answers is…",
+      "options": ["Structured", "Unstructured", "Hybrid", "A focus group"],
+      "answer": 2
+    },
+    {
+      "q": "Which elicitation success factor is about deciding stakeholders, session order and how to conduct sessions before starting?",
+      "options": ["Preparation", "Domain knowledge", "Defined business need", "Active stakeholder engagement"],
+      "answer": 0
+    },
+    {
+      "q": "\"Not all requirements are known at the start, so elicitation is iterative\" is the idea of…",
+      "options": ["Progressive elaboration", "Progressive decomposition", "Evolutionary prototyping", "Traceability"],
+      "answer": 0,
+      "explain": "Progressive elaboration (PMI) is about requirements emerging over time; progressive decomposition (CoreX) is about building models top-down with level caps."
+    },
+    {
+      "q": "A test fails and you need to know which business need and stakeholder the requirement came from. Which traceability direction?",
+      "options": ["Forward", "Backward", "Lateral", "None — use the glossary"],
+      "answer": 1
+    },
+    {
+      "q": "Which is a recommended practice for traceability according to the course?",
+      "options": [
+        "Keep all traceability in one giant document",
+        "A spreadsheet matrix, or metadata in tools like Jira/Confluence; avoid forcing one giant document",
+        "Add traceability only after release",
+        "Traceability is only for waterfall projects"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In an e-commerce app, stakeholders use \"customer\", \"client\" and \"shopper\" for the same thing. What should the glossary do?",
+      "options": [
+        "Keep all three as separate concepts",
+        "Link them as synonyms and settle on one term",
+        "Delete the concept",
+        "Make each a separate entity in the data model"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "CoreX comes from which point of view?",
+      "options": ["Organizational psychology", "Compiler theory", "Project finance", "Network engineering"],
+      "answer": 0
+    },
+    {
+      "q": "In CoreX's three-step process, what is the first step?",
+      "options": [
+        "Visual requirements modelling",
+        "Requirements gathering — define the problem (via JAD)",
+        "User interface design",
+        "Coding the prototype"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which CoreX key principle helps avoid legacy thinking?",
+      "options": [
+        "Start with the current state",
+        "Start with the future state",
+        "Give people exactly what they say they want",
+        "Skip the domain model"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What does CoreX do with non-functional requirements?",
+      "options": [
+        "Ignores them",
+        "Converts them into functional ones (KPIs, best-practice workflow, UX) the team is accountable for",
+        "Puts them all in the glossary",
+        "Leaves them to the testers"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In CoreX co-design, the analyst drafts models to about Level 2 before a workshop. How are those drafts used?",
+      "options": [
+        "Presented as the final answer",
+        "Only to restart a stalled session or to compare — the group builds the models from scratch",
+        "Emailed to stakeholders instead of holding a workshop",
+        "Thrown away unseen"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "From the requirement \"Instructors grade submitted assignments promptly\", which word lands in the workflow model?",
+      "options": ["Instructors", "assignments", "grade", "submitted"],
+      "answer": 2,
+      "explain": "Verbs (grade) and adverbs (promptly) → workflow model. Nouns (Instructors, assignments) and adjectives (submitted) → entity model."
+    },
+    {
+      "q": "In a GUI built from CoreX models, nouns and adjectives typically become…",
+      "options": ["Buttons and links", "Tables and forms (fields/columns)", "Error messages", "Navigation tabs only"],
+      "answer": 1
+    },
+    {
+      "q": "\"An Olympic athlete can only play a sport for one country\" — in the CoreX entity model, how is this cardinality shown?",
+      "options": [
+        "As a one-to-one line between Athletes and Countries",
+        "It isn't — relationships stay many-to-many and the constraint goes in the business rules model",
+        "As an attribute on Sports",
+        "As a decision diamond"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which business-rule category covers \"which roles may perform which tasks on which data\"?",
+      "options": ["Data and relationships", "Workflows and tasks", "Roles and permissions", "Events and messages"],
+      "answer": 2
+    },
+    {
+      "q": "Why keep business rules in one model instead of in UI code or the database?",
+      "options": [
+        "It makes the UI faster",
+        "It makes rule interactions visible and lets rules change at run time, instead of hiding them deep in code",
+        "Because the database can't store rules",
+        "Because rules are optional"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In the data model at Level 1, a box like \"Regulated parties\"…",
+      "options": [
+        "Must become a database table",
+        "May become a package or component rather than an entity/class",
+        "Must have attributes listed",
+        "Is always a business rule"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "The conceptual UI design is compared to an architect's…",
+      "options": ["Blueprint", "Artist's impression", "Building permit", "Foundation"],
+      "answer": 1,
+      "explain": "Enough to confirm the concept with decision-makers before detailed design; usually key workbenches plus screens for key workflows, and usability-testable."
+    },
+    {
+      "q": "On the conceptual UI example, the top navigation tabs trace back to which model?",
+      "options": ["Domain model", "Workflow model", "Business rules model", "Data model"],
+      "answer": 0,
+      "explain": "Domain → navigation tabs; data → tables of records; workflow → Update/Manage controls; business rules → constraints like the running total."
+    },
+    {
+      "q": "In the student-groups workflow, \"Groups are joinable?\" with Yes/No branches is drawn as a…",
+      "options": ["Fork bar", "Decision diamond", "Activity", "End circle"],
+      "answer": 1
+    },
+    {
+      "q": "CoreX leaves which of these OUT of the workflow model?",
+      "options": [
+        "Key tasks",
+        "Decisions",
+        "Swim lanes, roles/permissions and constraints",
+        "Start and end points"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Which user story best follows the template and INVEST?",
+      "options": [
+        "Build the database schema for carts.",
+        "As a shopper, I want to delete an item from my cart so that I only pay for what I want.",
+        "The system shall be fast.",
+        "As a developer, I want to rewrite the entire site."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A story would take the team three sprints. Which INVEST criterion does it most clearly fail?",
+      "options": ["Valuable", "Small", "Negotiable", "Testable"],
+      "answer": 1
+    },
+    {
+      "q": "A story has no acceptance criteria, so nobody can confirm when it's finished. Which INVEST criterion fails?",
+      "options": ["Independent", "Estimable", "Testable", "Valuable"],
+      "answer": 2
+    },
+    {
+      "q": "Writing the Definition of Done for \"subscribe to an RSS feed\" revealed that users also need an account and a login. This shows the DoD…",
+      "options": [
+        "Is unnecessary",
+        "Surfaces hidden prerequisites/dependencies",
+        "Should be written after release",
+        "Replaces the user story"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In Mike Cohn's example backlogs, notes like \"After each survey? After a set period?\" illustrate which INVEST idea?",
+      "options": ["Independent", "Negotiable — the story is a placeholder for a conversation", "Small", "Estimable"],
+      "answer": 1
+    },
+    {
+      "q": "For an LMS, \"Course Catalog\", \"Quizzes\" and \"Forums\" groupings in a backlog act like…",
+      "options": ["Tasks", "Epics/features", "Acceptance tests", "Business rules"],
+      "answer": 1
+    },
+    {
+      "q": "College students need textbooks. You sketch five very different ways (bookstore, second-hand, print-on-demand, espresso printer, tablet download). This is…",
+      "options": [
+        "Sacrificial candidate solutions",
+        "Evolutionary prototyping",
+        "A traceability matrix",
+        "A business rules model"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Sally's Freecycle chair example — Sally joins → takes photos → posts → time passes → applicant responds → pickup — is shown as a…",
+      "options": ["Storyboard", "Process model", "Mind map", "Domain model"],
+      "answer": 1
+    },
+    {
+      "q": "\"Good Food for One\" with branches for recipes, search, meal of the day, and profile is an example of a…",
+      "options": ["Mind map", "Wireframe", "Storyboard", "Process model"],
+      "answer": 0
+    },
+    {
+      "q": "Which prototype is built with the organization's programming languages and actually works?",
+      "options": [
+        "Presentation hi-fi prototype",
+        "Functional hi-fi prototype",
+        "Low-fidelity sketch",
+        "Video walk-through"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Why might you present a candidate solution as a video walk-through?",
+      "options": [
+        "Video is cheaper than paper",
+        "People are visual and drawn to moving images, making it an engaging way to show how a solution would work",
+        "Video replaces requirements",
+        "It's required by BABOK"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which thinking category is linear and logical, analyzing what is there?",
+      "options": ["Creative thinking", "Analytical thinking", "Quick thinking", "Lateral thinking"],
+      "answer": 1
+    },
+    {
+      "q": "Mock-ups/wireframes sit at the overlap of which areas?",
+      "options": [
+        "Elicitation, analysis and interface design (design thinking)",
+        "Testing, deployment and maintenance",
+        "Budgeting, scheduling and staffing",
+        "Coding, compiling and linking"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Work requirements map to the job. If part of the job has no matching requirement, what happens?",
+      "options": [
+        "Nothing — it's handled automatically",
+        "People can't do that part of their job in the app",
+        "It becomes a transition requirement",
+        "The glossary covers it"
+      ],
+      "answer": 1
+    }
+  ]
+}

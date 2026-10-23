@@ -1,0 +1,1155 @@
+{
+  "modules": {
+    "01-course-introduction": [
+      {
+        "q": "Which three questions does the course address?",
+        "options": [
+          "What is a compiler, an OS, a network?",
+          "What is computation? Which problems can a computer solve? Which can be solved efficiently?",
+          "How to code, test and deploy?",
+          "What are sets, functions and graphs?"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does the SE 3310 midterm cover?",
+        "options": [
+          "Everything including Turing machines",
+          "Everything up to and including context-free grammars — not pushdown automata",
+          "Only DFAs",
+          "Only pumping lemma"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Hand-drawn automaton diagrams on assignments…",
+        "options": [
+          "Are fine if neat",
+          "Receive no marks — diagrams must be made with software (TikZ or Graphviz)",
+          "Get half marks",
+          "Must be scanned in colour"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which unit adds a stack to the machine so it can count without bound?",
+        "options": ["Unit 1 — regular languages", "Unit 2 — context-free languages", "Unit 3 — Turing machines", "Unit 5 — complexity"],
+        "answer": 1
+      },
+      {
+        "q": "In 1936, Church and Turing proved what?",
+        "options": [
+          "P = NP",
+          "Hilbert's mechanical procedure for deciding any statement does not exist",
+          "Every language is regular",
+          "RSA is breakable"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Chomsky (1956) sorted grammars into levels. What turned out to match those levels?",
+        "options": ["Programming languages", "Machines (automata) exactly", "Complexity classes", "Quantum circuits"],
+        "answer": 1
+      },
+      {
+        "q": "\"Checking a proposed timetable takes seconds, but finding one has no known fast method\" illustrates which open question?",
+        "options": ["The halting problem", "P = NP?", "Kleene's theorem", "The pumping lemma"],
+        "answer": 1
+      }
+    ],
+    "02-notation-languages-and-dfas": [
+      {
+        "q": "Is {∅} = ∅?",
+        "options": [
+          "True",
+          "False — ∅ has no elements, {∅} has exactly one (the empty set)",
+          "Only for finite sets",
+          "Undefined"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "|A| = 4. What is |𝒫(A)|?",
+        "options": ["4", "8", "16", "24"],
+        "answer": 2,
+        "explain": "Each element makes an independent in/out choice: 2⁴ = 16."
+      },
+      {
+        "q": "A = {x₁, x₂, x₃, x₄}. Which statement is TRUE?",
+        "options": [
+          "x₁ ⊂ A",
+          "{x₁, x₂, x₃, x₄} ⊂ A",
+          "{x₁, x₂, x₃, x₄} ⊆ A",
+          "∅ ∉ 𝒫(A)"
+        ],
+        "answer": 2,
+        "explain": "x₁ is an element, not a set. A proper subset must differ from A, but ⊆ allows equality."
+      },
+      {
+        "q": "How does a tuple differ from a set?",
+        "options": [
+          "Tuples are unordered",
+          "Tuples are ordered and allow repeats",
+          "Tuples can't contain numbers",
+          "There is no difference"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "|A| = 4 and |B| = 3. What is |A × B|?",
+        "options": ["7", "12", "64", "81"],
+        "answer": 1
+      },
+      {
+        "q": "For f : ℤ → ℤ with f(x) = x², what is the image?",
+        "options": ["ℤ", "ℕ", "The perfect squares {0, 1, 4, 9, …}", "∅"],
+        "answer": 2,
+        "explain": "The codomain is declared (ℤ); the image is what's actually achieved."
+      },
+      {
+        "q": "Over Σ = {A…Z}, why is PASSWORD1 not a string?",
+        "options": ["It's too long", "1 ∉ Σ", "Strings can't repeat letters", "It's infinite"],
+        "answer": 1
+      },
+      {
+        "q": "With a = 00 and b = 11, what is (ab)²?",
+        "options": ["00001111", "00110011", "0011", "11001100"],
+        "answer": 1,
+        "explain": "(ab)² ≠ a²b² = 00001111."
+      },
+      {
+        "q": "Σ* is infinite. Does it contain an infinitely long string?",
+        "options": [
+          "Yes",
+          "No — every element of Σ* is finite; there's just no longest one",
+          "Only if Σ is infinite",
+          "Only ε"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Formally, what is computation in this course?",
+        "options": [
+          "Running a program",
+          "Deciding, for a language L and string s, whether s ∈ L",
+          "Computing f(x)",
+          "Sorting a list"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the DFA transition function's signature?",
+        "options": ["δ : Q → Σ", "δ : Q × Σ → Q", "δ : Q × Σ → 𝒫(Q)", "δ : Σ → Q"],
+        "answer": 1
+      },
+      {
+        "q": "The two-state DFA where 1 swaps states and 0 loops, accepting q₁: which string is accepted?",
+        "options": ["0110", "1010", "111", "0000"],
+        "answer": 2,
+        "explain": "It accepts an odd number of 1s. 111 has three."
+      }
+    ],
+    "03-regular-languages-and-dfa-construction": [
+      {
+        "q": "A finite state transducer differs from a DFA because…",
+        "options": [
+          "It has infinitely many states",
+          "It produces output — edges are labelled input/output",
+          "It uses a stack",
+          "It's non-deterministic"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A language is regular if…",
+        "options": [
+          "It is finite",
+          "Some finite automaton recognizes it",
+          "It has a grammar",
+          "It contains ε"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is step 1 of the DFA design checklist?",
+        "options": [
+          "Draw every arrow",
+          "Ask what the machine must remember — each situation becomes a state",
+          "Pick the accept state",
+          "Test four strings"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "The \"divisible by 4\" DFA passes through the accepting state while reading 0100 but leaves it. What decides acceptance?",
+        "options": [
+          "Any visit to an accept state",
+          "Only the state after the last symbol",
+          "The first state visited",
+          "The number of visits"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is a dead state?",
+        "options": [
+          "The start state",
+          "A state that can never lead to an accepting state",
+          "An accepting state with no exits",
+          "An unreachable state"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "True or false: every DFA diagram must draw a dead state.",
+        "options": [
+          "True",
+          "False — δ just has to be total; missing arrows are conventionally read as going to an undrawn dead state",
+          "True for NFAs only",
+          "False — DFAs can't have dead states"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Accepting EE or OO in the parity machine collapses to which language?",
+        "options": ["Odd length", "Even length", "Contains 01", "All strings"],
+        "answer": 1
+      },
+      {
+        "q": "In the contains-11010 DFA, a mismatch in s5 (having read 1101, then 1) goes to s3, not s1. Why?",
+        "options": [
+          "Arbitrary choice",
+          "The text now ends in 11, which is still a prefix of 11010 — going to s1 would discard a real partial match",
+          "s1 is the dead state",
+          "To minimize states"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Reversing the 11010 DFA (swap start/accept, reverse arrows) produces…",
+        "options": [
+          "A DFA for the same language",
+          "A machine for 01011 that is not a DFA — some states have two arrows for a symbol, others none",
+          "An empty machine",
+          "A PDA"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How many states does a DFA for \"at least two 1s\" need?",
+        "options": ["2", "3", "4", "Infinitely many"],
+        "answer": 1,
+        "explain": "zero, one, two+ — beyond two, the exact count stops mattering."
+      },
+      {
+        "q": "For the ends-in-01 DFA, from the accepting state a 0 goes to…",
+        "options": [
+          "The start state",
+          "The \"...0\" state — the 0 may begin the next 01",
+          "The dead state",
+          "Stays in the accepting state"
+        ],
+        "answer": 1
+      }
+    ],
+    "04-non-determinism-and-nfas": [
+      {
+        "q": "When does an NFA accept?",
+        "options": [
+          "When all threads accept",
+          "When at least one thread ends in an accepting state",
+          "When the first thread accepts",
+          "When no thread dies"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the NFA transition function's signature?",
+        "options": [
+          "δ : Q × Σ → Q",
+          "δ : Q × Σε → 𝒫(Q)",
+          "δ : Q → 𝒫(Σ)",
+          "δ : Q × Γ → Q"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "δ(q, a) = ∅ in an NFA means…",
+        "options": [
+          "The machine rejects immediately",
+          "That thread terminates; the computation continues if other threads are alive",
+          "Go to the start state",
+          "An error in the definition"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "True or false: an NFA rejects as soon as one thread dies.",
+        "options": ["True", "False — rejection requires every thread to fail at the end", "True only with ε-moves", "True for DFAs"],
+        "answer": 1
+      },
+      {
+        "q": "True or false: every DFA is an NFA.",
+        "options": [
+          "True — a DFA is an NFA whose δ-sets have exactly one element and that never uses ε",
+          "False",
+          "Only minimal DFAs",
+          "Only with a dead state"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Run the ends-in-01 NFA (q₀ loops; q₀ →0 q₁ →1 q₂) on 0110 by sets. Result?",
+        "options": [
+          "Accepted — q₂ appeared after 01",
+          "Rejected — final set {q₀, q₁} has no q₂",
+          "Accepted — final set {q₀, q₂}",
+          "Undefined"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "An NFA for \"contains s\" for a pattern of length n always has how many states?",
+        "options": ["n", "n + 1", "2ⁿ", "2n"],
+        "answer": 1
+      },
+      {
+        "q": "In the contains-11010 NFA, removing the loop on the start state q₀ changes the language to…",
+        "options": [
+          "Strings ending in 11010",
+          "Strings beginning with 11010",
+          "Only 11010",
+          "Nothing changes"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is E({p}) if p →ε q →ε r?",
+        "options": ["{p}", "{p, q}", "{p, q, r}", "{q, r}"],
+        "answer": 2,
+        "explain": "Chains count — keep following ε-arrows until nothing new appears."
+      },
+      {
+        "q": "E({q}) when no ε-arrow leaves q is…",
+        "options": ["∅", "{q}", "Q", "Undefined"],
+        "answer": 1
+      },
+      {
+        "q": "What is the standard use of ε-transitions from a new start state?",
+        "options": [
+          "Making the machine deterministic",
+          "Running two machines as one (union) without merging their states",
+          "Adding a dead state",
+          "Counting symbols"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "The \"lucky guess\" interpretation of non-determinism involves…",
+        "options": [
+          "Randomness",
+          "No randomness — if an accepting path exists, the guess is defined to find it",
+          "Trying paths one at a time with backtracking",
+          "A coin flip per symbol"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "An NFA for \"third-to-last symbol is 1\" has 4 states. How many does the DFA need?",
+        "options": ["4", "6", "8", "16"],
+        "answer": 2,
+        "explain": "It must remember the last three symbols: 2³ = 8."
+      },
+      {
+        "q": "A machine has an ε-arrow, some empty rows, and one row with two entries. It is…",
+        "options": ["A valid DFA", "A valid NFA but not a DFA", "Neither", "A PDA"],
+        "answer": 1
+      }
+    ],
+    "05-the-subset-construction": [
+      {
+        "q": "What does the subset construction prove?",
+        "options": [
+          "Every DFA has an equivalent NFA",
+          "Every NFA has an equivalent DFA",
+          "Every language is regular",
+          "NFAs are more powerful than DFAs"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "An NFA has 3 states. At most how many states can its subset DFA have?",
+        "options": ["3", "6", "8", "9"],
+        "answer": 2
+      },
+      {
+        "q": "What is the start state of the subset DFA?",
+        "options": ["{q₀}", "E({q₀})", "Q", "∅"],
+        "answer": 1,
+        "explain": "Forgetting the closure on the start state is the most common conversion mistake."
+      },
+      {
+        "q": "When is a subset state accepting?",
+        "options": [
+          "When all members accept",
+          "When it contains at least one NFA accepting state",
+          "Only if it's the start state",
+          "Never"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How is a combined row like δ_D({q₀, q₁}, a) computed?",
+        "options": [
+          "The intersection of member rows",
+          "The union of the members' single-state rows",
+          "Copy q₀'s row",
+          "Always ∅"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In Example 1, state 3 →a 1 and 1 →ε 3. What is δ_D({3}, a)?",
+        "options": ["{1}", "{3}", "{1, 3}", "∅"],
+        "answer": 2,
+        "explain": "The closure applies after every step: E({1}) = {1, 3}."
+      },
+      {
+        "q": "In the subset DFA, the empty set ∅ is…",
+        "options": ["The start state", "An accepting state", "The dead state", "Invalid"],
+        "answer": 2
+      },
+      {
+        "q": "Does the subset construction ever change the language?",
+        "options": [
+          "Sometimes",
+          "Never — the DFA state always equals the NFA's set of live states",
+          "Only with ε-moves",
+          "Only if states are removed"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Converting the ends-in-01 NFA yields how many reachable subset states?",
+        "options": ["2", "3", "5", "8"],
+        "answer": 1,
+        "explain": "{q₀}, {q₀, q₁}, {q₀, q₂} — exactly Lecture 3's hand-built DFA, renamed."
+      },
+      {
+        "q": "Step 5 of the algorithm, mislabelled \"minimization\" on the slides, actually does what?",
+        "options": [
+          "Merges equivalent states",
+          "Discards unreachable states",
+          "Adds a dead state",
+          "Removes ε-moves"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does the equivalence of NFAs and DFAs buy you?",
+        "options": [
+          "Smaller machines always",
+          "One notion of \"regular\", and the freedom to design with an NFA",
+          "Faster execution of NFAs",
+          "Nothing practical"
+        ],
+        "answer": 1
+      }
+    ],
+    "06-closure-properties-and-regular-expressions": [
+      {
+        "q": "To disprove a closure property, what suffices?",
+        "options": [
+          "A general construction",
+          "One counterexample",
+          "Pumping lemma",
+          "Kleene's theorem"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How do you complement a regular language?",
+        "options": [
+          "Swap accept states of any NFA",
+          "Determinize to a DFA, then swap accepting and non-accepting states",
+          "Reverse the arrows",
+          "Add ε-moves"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why doesn't swapping accept states work on an NFA?",
+        "options": [
+          "NFAs have no accept states",
+          "A string may have accepting paths under both the original and swapped sets",
+          "NFAs can't be complemented",
+          "It only fails with ε"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "The union construction adds…",
+        "options": [
+          "A new start state with ε-arrows to both machines' start states",
+          "A new accept state",
+          "A product of the state sets",
+          "A stack"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "In the concatenation construction for L₂L₁, why are L₂'s accepting states demoted?",
+        "options": [
+          "To reduce states",
+          "Otherwise bare L₂ strings with no L₁ part would be accepted",
+          "NFAs can only have one accept state",
+          "To remove ε-moves"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why does the star construction add a NEW accepting start state rather than marking the old start accepting?",
+        "options": [
+          "Style",
+          "Computations can return to the old start mid-run and would then wrongly accept",
+          "To allow ε-moves",
+          "NFAs need two start states"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How is closure under intersection proved?",
+        "options": [
+          "A new ε-construction",
+          "De Morgan: L₁ ∩ L₂ = complement(L̄₁ ∪ L̄₂), using closure under complement and union",
+          "Pumping lemma",
+          "It isn't closed"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What language does 0*10* describe?",
+        "options": ["At least one 1", "Exactly one 1", "Starts with 1", "Ends with 0"],
+        "answer": 1
+      },
+      {
+        "q": "Is 0011 in 1*(01⁺)*?",
+        "options": ["Yes", "No — the first 0 is followed by a 0", "Only if ε", "Yes, as two blocks"],
+        "answer": 1
+      },
+      {
+        "q": "What is ϕ* (star of the empty set)?",
+        "options": ["ϕ", "{ε}", "Σ*", "Undefined"],
+        "answer": 1,
+        "explain": "k = 0 blocks is always allowed and yields ε. But Rϕ = ϕ."
+      },
+      {
+        "q": "What does Kleene's theorem state?",
+        "options": [
+          "Every NFA has a DFA",
+          "A language is regular iff some regular expression describes it",
+          "Every CFL is regular",
+          "The pumping lemma holds"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which RE describes strings containing 11010?",
+        "options": ["Σ*11010", "11010Σ*", "Σ*11010Σ*", "(11010)*"],
+        "answer": 2
+      },
+      {
+        "q": "The precedence in ab* ∪ c is…",
+        "options": ["((ab)*) ∪ c", "(a(b*)) ∪ c", "a(b* ∪ c)", "(ab)*c"],
+        "answer": 1,
+        "explain": "Star binds tightest, then concatenation, then union."
+      },
+      {
+        "q": "Reversing the ends-in-01 language gives…",
+        "options": ["Ends in 10", "Begins with 10", "Begins with 01", "Contains 01"],
+        "answer": 1
+      }
+    ],
+    "07-non-regular-languages-and-the-pumping-lemma": [
+      {
+        "q": "Why is {0ⁿ1ⁿ : n ≥ 0} not regular, intuitively?",
+        "options": [
+          "It's infinite",
+          "Matching the counts requires remembering an unbounded number — finitely many states can't",
+          "It contains ε",
+          "It has two symbols"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Is {0ⁿ1ⁿ : 0 ≤ n ≤ 100} regular?",
+        "options": [
+          "No — same shape as 0ⁿ1ⁿ",
+          "Yes — it's finite (101 strings), and every finite language is regular",
+          "Only with a PDA",
+          "Undecidable"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the pumping lemma game, who chooses p and the split xyz?",
+        "options": ["You", "The adversary", "You choose p, adversary splits", "Adversary chooses p, you split"],
+        "answer": 1,
+        "explain": "Adversary: p and the split. You: s and i."
+      },
+      {
+        "q": "Why does the pumping lemma hold for regular languages?",
+        "options": [
+          "Kleene's theorem",
+          "Pigeonhole: reading p symbols on a p-state DFA visits some state twice, creating a loop",
+          "De Morgan",
+          "The subset construction"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does condition |xy| ≤ p buy you when s begins with 0ᵖ?",
+        "options": [
+          "Nothing",
+          "y must consist only of 0s — the case analysis collapses to one case",
+          "y must be empty",
+          "x must be empty"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "\"Let p = 5 and s = 0⁵1⁵…\" What's wrong with this proof?",
+        "options": [
+          "s is not in L",
+          "p is the adversary's unknown number; fixing it proves nothing for larger machines",
+          "Should use i = 0",
+          "Nothing"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "\"Split s as x = ε, y = 0ᵖ, z = 1ᵖ; pumping gives 0²ᵖ1ᵖ ∉ L.\" What's wrong?",
+        "options": [
+          "Nothing",
+          "Only one split was defeated — you must defeat every legal split",
+          "i must be 0",
+          "s is too short"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "You pumped every split of a string successfully. What have you proved?",
+        "options": ["The language is regular", "Nothing", "The language is context-free", "The language is finite"],
+        "answer": 1
+      },
+      {
+        "q": "For L = {0ᵐ1ⁿ : m > n}, which pump works with s = 0ᵖ⁺¹1ᵖ?",
+        "options": ["i = 2", "i = 0 (pumping down)", "i = 1", "None"],
+        "answer": 1,
+        "explain": "Pumping up only increases the surplus of 0s; deleting y removes it."
+      },
+      {
+        "q": "Prove \"equally many 0s and 1s\" (L₄) is non-regular without pumping. How?",
+        "options": [
+          "L₄ ∪ 0*1* = Σ*",
+          "If L₄ were regular, L₄ ∩ 0*1* = {0ⁿ1ⁿ} would be regular — contradiction",
+          "L₄ is finite",
+          "Complement of L₄ is regular"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which condition ensures pumping actually changes the string?",
+        "options": ["xyⁱz ∈ L", "|y| > 0", "|xy| ≤ p", "|s| ≥ p"],
+        "answer": 1
+      },
+      {
+        "q": "Which string is a legitimate choice for proving {0ⁿ1ⁿ} non-regular?",
+        "options": ["(01)ᵖ", "0⁵⁰⁰1⁵⁰⁰", "0ᵖ1ᵖ", "1ᵖ0ᵖ"],
+        "answer": 2
+      }
+    ],
+    "08-context-free-grammars": [
+      {
+        "q": "A CFG is which tuple?",
+        "options": ["(Q, Σ, δ, q₀, F)", "(V, Σ, R, S)", "(Q, Σ, Γ, δ, q₀, F)", "(V, R)"],
+        "answer": 1
+      },
+      {
+        "q": "A → 0A1 | ε generates which language?",
+        "options": ["0*1*", "{0ⁿ1ⁿ : n ≥ 0}", "Equal 0s and 1s in any order", "Palindromes"],
+        "answer": 1
+      },
+      {
+        "q": "Why can a grammar describe {0ⁿ1ⁿ} when no DFA can?",
+        "options": [
+          "Grammars have infinite states",
+          "It builds the string from the middle outward, pairing each 0 with its 1 at birth — no counting needed",
+          "Grammars use stacks",
+          "It's a trick"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In a derivation, the arrow ⇒ is used for ____ and → for ____.",
+        "options": ["rules; steps", "steps; rules", "both are the same", "terminals; variables"],
+        "answer": 1
+      },
+      {
+        "q": "When does a derivation stop?",
+        "options": [
+          "After a fixed number of steps",
+          "When no variables remain — only terminals",
+          "When S reappears",
+          "When ε is used"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "To show w ∉ L(G), you must…",
+        "options": [
+          "Show a few failed derivations",
+          "Argue no derivation exists, usually via an invariant every rule preserves",
+          "Use the pumping lemma",
+          "Convert to a DFA"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In S → (S) | SS | ε, removing which rule makes ()() unreachable?",
+        "options": ["(S)", "SS", "ε", "None"],
+        "answer": 1
+      },
+      {
+        "q": "Why is the English sentence grammar's language finite?",
+        "options": [
+          "Few words",
+          "No variable can ever reproduce itself — no recursion",
+          "It has ε rules",
+          "Sentences must end with a period"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the relationship between REG and CFL?",
+        "options": ["REG = CFL", "REG ⊂ CFL strictly", "CFL ⊂ REG", "Disjoint"],
+        "answer": 1,
+        "explain": "{0ⁿ1ⁿ} is the witness: context-free but not regular."
+      },
+      {
+        "q": "In the DFA → CFG conversion, a transition qᵢ × s → qⱼ becomes…",
+        "options": ["Qⱼ → sQᵢ", "Qᵢ → sQⱼ", "Qᵢ → Qⱼs", "s → QᵢQⱼ"],
+        "answer": 1
+      },
+      {
+        "q": "In the DFA → CFG conversion, which states get an ε-rule?",
+        "options": ["The start state", "Accepting states", "Dead states", "All states"],
+        "answer": 1
+      },
+      {
+        "q": "Q0 → 1Q0 | 0Q1, Q1 → 1Q1 | 0Q2, Q2 → 1Q2 | ε generates…",
+        "options": ["At least two 0s", "Exactly two 0s", "Ends in 00", "Even number of 0s"],
+        "answer": 1
+      },
+      {
+        "q": "In S → T1T, T → TT | 1T | 0T1 | 1T0 | ε, what invariant does every T-rule preserve?",
+        "options": [
+          "Equal 0s and 1s",
+          "At least as many 1s as 0s",
+          "More 0s than 1s",
+          "Even length"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which grammar generates palindromes over {0, 1}?",
+        "options": ["P → 0P1 | ε", "P → 0P0 | 1P1 | 0 | 1 | ε", "P → PP | 0 | 1", "P → 0P | 1P | ε"],
+        "answer": 1
+      }
+    ],
+    "09-pushdown-automata": [
+      {
+        "q": "A PDA is essentially…",
+        "options": ["A DFA with output", "An NFA plus a stack", "A Turing machine", "A CFG"],
+        "answer": 1
+      },
+      {
+        "q": "A PDA is which tuple?",
+        "options": ["(Q, Σ, δ, q₀, F)", "(Q, Σ, Γ, δ, q₀, F)", "(V, Σ, R, S)", "(Q, Γ, δ)"],
+        "answer": 1
+      },
+      {
+        "q": "What does the transition label 1, 0 → ε mean?",
+        "options": [
+          "On input 1, push 0",
+          "On input 1 with 0 on top, pop the 0 and push nothing",
+          "On input 0, push 1",
+          "Do nothing"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why push $ at the start?",
+        "options": [
+          "Required by the definition",
+          "There's no built-in empty-stack test — when $ resurfaces, nothing else is left",
+          "To accept ε",
+          "To count symbols"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Does PDA acceptance depend on the stack being empty?",
+        "options": [
+          "Yes, always",
+          "No — finish the input in an accept state, whatever the stack holds",
+          "Only for deterministic PDAs",
+          "Only with $"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the {0ⁿ1ⁿ} PDA, what invariant does the stack hold?",
+        "options": ["All symbols read", "Exactly the unmatched 0s (above $)", "The 1s", "Nothing"],
+        "answer": 1
+      },
+      {
+        "q": "Why must q₁ (the start state) of the {0ⁿ1ⁿ} PDA be accepting?",
+        "options": ["Convention", "To accept ε (n = 0)", "To push $", "To pop 1s"],
+        "answer": 1
+      },
+      {
+        "q": "How does the {wwᴿ} PDA find the middle of the input?",
+        "options": [
+          "It counts symbols",
+          "It guesses with an ε-move; one branch guesses correctly",
+          "It reads the input twice",
+          "A special marker in the input"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Can nondeterminism always be removed from PDAs?",
+        "options": [
+          "Yes, via the subset construction",
+          "No — deterministic PDAs recognize strictly fewer languages (e.g. {wwᴿ})",
+          "Only for finite languages",
+          "Yes, by adding a second stack"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A language is context-free iff…",
+        "options": [
+          "A DFA recognizes it",
+          "Some PDA recognizes it",
+          "It's finite",
+          "Pumping fails"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How can a PDA push two symbols for one input 0 (for {0ⁿ1²ⁿ})?",
+        "options": [
+          "One transition pushes both",
+          "Route through an intermediate state with an extra ε-move",
+          "Use two stacks",
+          "It can't"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What's the weakest machine for {s : s ends in 01}?",
+        "options": ["DFA", "PDA", "Turing machine", "None"],
+        "answer": 0
+      },
+      {
+        "q": "Claiming a language \"needs a PDA\" requires…",
+        "options": [
+          "Just a PDA",
+          "A working PDA (or CFG) and a proof no DFA works",
+          "Just a pumping proof",
+          "A Turing machine"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  "final": [
+    {
+      "q": "What is |{{1, 2}}|?",
+      "options": ["0", "1", "2", "3"],
+      "answer": 1
+    },
+    {
+      "q": "For Σ = {0, 1}, how many strings are in Σ³?",
+      "options": ["3", "6", "8", "9"],
+      "answer": 2
+    },
+    {
+      "q": "ε0εε1 equals…",
+      "options": ["ε01", "01", "0ε1", "Undefined"],
+      "answer": 1
+    },
+    {
+      "q": "The DFA's transition function being a function is what makes it…",
+      "options": ["Finite", "Deterministic", "Regular", "Minimal"],
+      "answer": 1
+    },
+    {
+      "q": "A DFA's entire memory is…",
+      "options": ["A stack", "Which state it's currently in", "The whole input", "A tape"],
+      "answer": 1
+    },
+    {
+      "q": "Which DFA tracks binary integers divisible by 4?",
+      "options": [
+        "Count total 1s",
+        "Track the number of trailing 0s (none, one, two+)",
+        "Track parity",
+        "Count length"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Is the empty string accepted by the divisible-by-4 DFA?",
+      "options": ["Yes — 0 is divisible by 4", "No — ε isn't a binary integer", "Depends", "Only with a dead state"],
+      "answer": 1
+    },
+    {
+      "q": "The KMP string-matching algorithm builds what kind of machine?",
+      "options": ["An NFA", "A DFA like the contains-11010 machine", "A PDA", "A Turing machine"],
+      "answer": 1
+    },
+    {
+      "q": "Which is NOT a freedom an NFA has over a DFA?",
+      "options": ["Several arrows per symbol", "No arrow for a symbol", "ε-moves", "A stack"],
+      "answer": 3
+    },
+    {
+      "q": "In the ING/ER NFA, the live set before reading anything is…",
+      "options": ["{s}", "{s, a₁, b₁}", "{a₁, b₁}", "∅"],
+      "answer": 1
+    },
+    {
+      "q": "The ING/ER NFA rejects RINGS. Why?",
+      "options": [
+        "No ING inside",
+        "It enforces ends-in ING — after S, a₄ has no outgoing arrow and drops out",
+        "Too long",
+        "The ER branch kills it"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Design with an NFA, execute as a DFA. What's the cost of converting?",
+      "options": [
+        "The language changes",
+        "Possibly exponentially many states (k → 2ᵏ worst case)",
+        "Loss of ε",
+        "None"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "The subset DFA for \"second-to-last symbol is 1\" has how many reachable states?",
+      "options": ["3", "4", "8", "2"],
+      "answer": 1
+    },
+    {
+      "q": "A set is closed under an operation if…",
+      "options": [
+        "The operation is defined on it",
+        "Applying it to elements of the set always produces an element of the set",
+        "The set is finite",
+        "It has an identity"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Is ℕ closed under subtraction?",
+      "options": ["Yes", "No — e.g. 1 − 2 ∉ ℕ", "Only for even numbers", "Undefined"],
+      "answer": 1
+    },
+    {
+      "q": "Every closure proof by construction must check which three things?",
+      "options": [
+        "Speed, size, simplicity",
+        "Language, validity, generality",
+        "Start, accept, dead states",
+        "Union, star, concatenation"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "{ε} vs ϕ as regular expressions:",
+      "options": [
+        "Same language",
+        "{ε} has one member (the empty string); ϕ has none",
+        "ϕ has one member",
+        "Both are empty"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "R⁺ means…",
+      "options": ["R*", "RR* — one or more", "R ∪ ε", "R twice"],
+      "answer": 1
+    },
+    {
+      "q": "Which RE describes even-length strings over {0, 1}?",
+      "options": ["Σ*Σ", "(ΣΣ)*", "Σ*01", "0*1*"],
+      "answer": 1
+    },
+    {
+      "q": "Which direction of Kleene's theorem is NOT examined (algorithmically)?",
+      "options": [
+        "RE → machine",
+        "Machine → RE via state elimination",
+        "Both are examined",
+        "Neither"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which language is regular?",
+      "options": [
+        "{0ⁿ1ⁿ : n ≥ 0}",
+        "{ww : w ∈ {0,1}*}",
+        "{0ⁿ1ᵐ : n, m ≥ 0}",
+        "{s : equally many 0s and 1s}"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "The pumping lemma can show a language is…",
+      "options": ["Regular", "Not regular", "Context-free", "Both regular and not regular"],
+      "answer": 1
+    },
+    {
+      "q": "In the pumping lemma, which objects do YOU choose?",
+      "options": ["p and the split", "s and i", "p and s", "The split and i"],
+      "answer": 1
+    },
+    {
+      "q": "Pumping s = 0ᵖ1ᵖ with y = 0ᵏ and i = 2 gives…",
+      "options": ["0ᵖ1ᵖ", "0ᵖ⁺ᵏ1ᵖ", "0ᵖ1ᵖ⁺ᵏ", "0ᵖ⁻ᵏ1ᵖ"],
+      "answer": 1
+    },
+    {
+      "q": "For the copy language {ww}, which string is used?",
+      "options": ["0ᵖ0ᵖ", "0ᵖ1 0ᵖ1", "(01)ᵖ", "1ᵖ0ᵖ"],
+      "answer": 1
+    },
+    {
+      "q": "Every language in the Chomsky hierarchy has which two kinds of description?",
+      "options": [
+        "A machine that recognizes, and a grammar/expression that generates",
+        "A DFA and an NFA",
+        "A table and a diagram",
+        "A proof and a counterexample"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Membership in L(G) is like NFA acceptance because…",
+      "options": [
+        "Both use stacks",
+        "It's existential — one derivation (path) suffices",
+        "Both are deterministic",
+        "Both reject on failure"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A grammar for \"ends in 01\" directly is…",
+      "options": ["S → 0S | 1S | 01", "S → 01S | ε", "S → S01", "S → 0S1"],
+      "answer": 0
+    },
+    {
+      "q": "What makes a grammar describe an infinite language?",
+      "options": [
+        "Many terminals",
+        "Recursion — some variable can reproduce itself",
+        "ε rules",
+        "Many rules"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A parser for a programming language reconstructs…",
+      "options": [
+        "The DFA",
+        "The derivation of the source file under the language's CFG",
+        "The stack trace",
+        "The pumping length"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "PDA transition label ε, $ → ε means…",
+      "options": [
+        "Push $",
+        "Without reading input, if $ is on top, pop it",
+        "Read $ from input",
+        "Do nothing"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Start from an empty stack: push $, push 0, push 0, pop, push 1, pop, pop. What remains?",
+      "options": ["Empty", "$", "$0", "$01"],
+      "answer": 1
+    },
+    {
+      "q": "The {0ⁿ1ⁿ} PDA on input 001 ends in q₃ with stack $0. Result?",
+      "options": [
+        "Accept",
+        "Reject — the leftover 0 keeps $ buried, so the jump to the accept state can't fire",
+        "Error",
+        "Loops forever"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In the balanced-parentheses PDA, the stack height over time equals…",
+      "options": ["The string length", "The nesting depth", "The number of ) read", "Always 1"],
+      "answer": 1
+    },
+    {
+      "q": "In {aⁱbʲ : i ≥ j}, why can the PDA accept with leftover a's on the stack?",
+      "options": [
+        "A bug",
+        "Acceptance ignores the stack — the inequality lives in which failures we stopped punishing",
+        "a's are popped automatically",
+        "It must empty the stack"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Why can't the subset construction determinize a PDA?",
+      "options": [
+        "PDAs have no states",
+        "One stack can't track many stacks at once",
+        "PDAs have no ε-moves",
+        "It can"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which is the CFL analogue of Kleene's theorem?",
+      "options": [
+        "The pumping lemma",
+        "Context-free ⟺ recognized by some PDA",
+        "REG ⊂ CFL",
+        "The subset construction"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "{wwᴿ : w ∈ {0,1}*} — weakest machine?",
+      "options": ["DFA", "NFA", "PDA", "None"],
+      "answer": 2
+    }
+  ]
+}

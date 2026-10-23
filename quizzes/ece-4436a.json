@@ -1,0 +1,926 @@
+{
+  "modules": {
+    "01-computer-networks-and-the-internet": [
+      {
+        "q": "A laptop and a printer share one Ethernet cable, speaking IP, with nothing else attached. What is it?",
+        "options": [
+          "Part of the Internet",
+          "A network, but not part of the Internet — nothing joins it to another network",
+          "Not a network — there's no router",
+          "A peer-to-peer CDN"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What makes something \"the Internet\"?",
+        "options": [
+          "A single owner managing all routers",
+          "Many independently owned networks joined at their boundaries by routers",
+          "Using Wi-Fi",
+          "Having a DNS server"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which three things does a protocol define?",
+        "options": [
+          "Speed, cost, distance",
+          "Format and order of messages, and actions taken on send/receive",
+          "Hosts, links, routers",
+          "Source, destination, payload"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A server parses an HTTP request correctly and then sends nothing back. Has it followed the protocol?",
+        "options": [
+          "Yes — parsing is enough",
+          "No — the required response (action) is part of the protocol",
+          "Only if the request was GET",
+          "Only over UDP"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which device forwards on MAC addresses within one network?",
+        "options": ["Router", "Switch", "Modem", "Host"],
+        "answer": 1
+      },
+      {
+        "q": "Which device forwards on IP addresses between different networks?",
+        "options": ["Switch", "Access point", "Router", "Modem"],
+        "answer": 2
+      },
+      {
+        "q": "What does a modem change?",
+        "options": [
+          "The destination",
+          "The signal, never the destination",
+          "The IP address",
+          "The MAC address"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why does cable Internet slow at 8 pm while a DSL line doesn't?",
+        "options": [
+          "DSL uses fiber",
+          "Cable is one shared coaxial run for the street; DSL is a dedicated pair per home",
+          "Cable has a lower peak rate",
+          "DSL has no modem"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which hop usually sets the bottleneck on a home user's path?",
+        "options": ["The core", "The access network", "The tier-1 backbone", "The server's LAN"],
+        "answer": 1
+      },
+      {
+        "q": "Forwarding is ____; routing is ____.",
+        "options": [
+          "global and rare; local and per-packet",
+          "local, per-packet, microseconds; global, seconds to minutes",
+          "done by switches; done by hosts",
+          "the same thing"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does store-and-forward mean for a packet crossing three links?",
+        "options": [
+          "It's transmitted once in total",
+          "It pays a full transmission delay on every link",
+          "It skips transmission on fast links",
+          "Propagation is paid once"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "3 pkt/s arrive at a link that can send 1 pkt/s. What happens?",
+        "options": [
+          "Delay grows forever",
+          "The buffer fills and about two thirds of arrivals are dropped",
+          "The link speeds up",
+          "Nothing — buffers are infinite"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "TDM gives each user…",
+        "options": [
+          "Its own frequency band all the time",
+          "The whole link for a repeating slice of time",
+          "A share only when the queue is empty",
+          "A dedicated cable"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A 1 Mb/s link with 100 kb/s users active 10% of the time. Circuit switching supports 10 users. Packet switching supports about…",
+        "options": ["10", "~35", "100", "1"],
+        "answer": 1
+      },
+      {
+        "q": "Why is there an ISP hierarchy instead of a full mesh?",
+        "options": [
+          "Regulation",
+          "N networks need N(N−1)/2 links — impossible to build and pay for",
+          "Routers can only have two ports",
+          "Tier-1s forbid meshing"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Two access ISPs that both buy transit from the same tier-1 start peering at a local IXP. What changes?",
+        "options": [
+          "They no longer need the tier-1 at all",
+          "Traffic between their customers stops crossing the tier-1 and paying transit; they still need it for everything else",
+          "They become tier-1s",
+          "Nothing changes"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which delay does NOT depend on packet length or link rate?",
+        "options": ["Transmission", "Queueing", "Propagation", "None"],
+        "answer": 2
+      },
+      {
+        "q": "Which of the four nodal delays is the only one that changes with load?",
+        "options": ["Processing", "Queueing", "Transmission", "Propagation"],
+        "answer": 1
+      },
+      {
+        "q": "A tenfold faster link on a long path (London → Thunder Bay) cuts total one-way delay by only ~2%. Why?",
+        "options": [
+          "Queueing dominates",
+          "Propagation dominates, and a faster link doesn't change it",
+          "Processing dominates",
+          "The link was the bottleneck"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Traffic intensity goes above 1. What does a bigger buffer do?",
+        "options": [
+          "Fixes the problem",
+          "Converts loss into latency — it doesn't fix I > 1",
+          "Reduces I",
+          "Increases throughput"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A path has links of 100, 1 and 100 Mb/s. What is the throughput?",
+        "options": ["201 Mb/s", "100 Mb/s", "67 Mb/s", "1 Mb/s"],
+        "answer": 3
+      },
+      {
+        "q": "What does a link-layer switch read from an arriving frame?",
+        "options": [
+          "All headers",
+          "Only the link header",
+          "The network and transport headers",
+          "The application payload"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the five-layer stack, the transport layer's unit is a…",
+        "options": ["Message", "Segment", "Datagram", "Frame"],
+        "answer": 1,
+        "explain": "Application: message · Transport: segment · Network: datagram · Link: frame · Physical: bits."
+      },
+      {
+        "q": "What does encapsulation mean?",
+        "options": [
+          "Each layer opens and modifies the one above",
+          "Each layer wraps what it's given without opening it; the receiver unwraps in reverse order",
+          "Encrypting data",
+          "Compressing headers"
+        ],
+        "answer": 1
+      }
+    ],
+    "01-equation-sheet": [
+      {
+        "q": "What is L for a 1,500-byte packet?",
+        "options": ["1,500 bits", "12,000 bits", "150 bits", "187.5 bits"],
+        "answer": 1,
+        "explain": "Bytes × 8. The missing factor of eight is the commonest lost mark."
+      },
+      {
+        "q": "Transmission delay of a 1,000-byte packet on a 2 Mb/s link?",
+        "options": ["0.5 ms", "4 ms", "2 ms", "8 ms"],
+        "answer": 1,
+        "explain": "8,000 bits / 2×10⁶ b/s = 4 ms."
+      },
+      {
+        "q": "Propagation delay over 1,000 km of fiber (s = 2×10⁸ m/s)?",
+        "options": ["0.5 ms", "5 ms", "50 ms", "2 ms"],
+        "answer": 1,
+        "explain": "10⁶ / 2×10⁸ = 5 ms. Rule of thumb: fiber covers 200 km per ms."
+      },
+      {
+        "q": "A 1,500-byte packet joins a 10 Mb/s queue behind 3 packets of the same size. Queueing delay?",
+        "options": ["1.2 ms", "3.6 ms", "4.8 ms", "0.36 ms"],
+        "answer": 1,
+        "explain": "3 × 12,000 / 10⁷ = 3 × 1.2 ms = 3.6 ms."
+      },
+      {
+        "q": "1,000-byte packet, 400 km, 2 Mb/s, 2 packets queued, negligible processing. Nodal delay?",
+        "options": ["10 ms", "12 ms", "14 ms", "6 ms"],
+        "answer": 2,
+        "explain": "L/R = 4 ms. Queue 8 + trans 4 + prop 2 = 14 ms."
+      },
+      {
+        "q": "A 1,500-byte packet crosses three idle 10 Mb/s links. Ignoring propagation, what is the total transmission delay?",
+        "options": ["1.2 ms", "3.6 ms", "0.4 ms", "12 ms"],
+        "answer": 1,
+        "explain": "Store-and-forward: 1.2 ms per link × 3."
+      },
+      {
+        "q": "L = 12,000 bits, a = 500 pkt/s, R = 10 Mb/s. Traffic intensity I?",
+        "options": ["0.06", "0.6", "6", "1.2"],
+        "answer": 1,
+        "explain": "La/R = 6×10⁶ / 10⁷ = 0.6."
+      },
+      {
+        "q": "A 20-slot buffer on a link where L/R = 1.2 ms. What's the longest possible queueing wait?",
+        "options": ["1.2 ms", "12 ms", "24 ms", "Unbounded"],
+        "answer": 2
+      },
+      {
+        "q": "A 10 MB file crosses a path of 20, 5 and 100 Mb/s links. Download time?",
+        "options": ["2 s", "4 s", "16 s", "0.8 s"],
+        "answer": 2,
+        "explain": "F = 80×10⁶ bits. Throughput = min = 5 Mb/s. T = 16 s."
+      },
+      {
+        "q": "4 MB file, server uploads at 2 Mb/s, your access link is 1 Mb/s. Which change halves the download time?",
+        "options": [
+          "Doubling the server's link",
+          "Doubling your access link",
+          "Doubling the core",
+          "None"
+        ],
+        "answer": 1,
+        "explain": "The bottleneck is your 1 Mb/s access link: 32 s → 16 s."
+      },
+      {
+        "q": "A 2 Mb/s link divided into 250 kb/s TDM slots supports how many users?",
+        "options": ["4", "8", "16", "250"],
+        "answer": 1
+      },
+      {
+        "q": "20 µs expressed in ms is…",
+        "options": ["2 ms", "0.2 ms", "0.02 ms", "0.002 ms"],
+        "answer": 2
+      }
+    ],
+    "02-equation-sheet": [
+      {
+        "q": "Non-persistent HTTP: 1 HTML + 5 objects, RTT 50 ms, negligible transmission. Total time?",
+        "options": ["300 ms", "350 ms", "600 ms", "550 ms"],
+        "answer": 2,
+        "explain": "2·RTT·(n+1) = 2 × 50 × 6 = 600 ms."
+      },
+      {
+        "q": "Same page with persistent HTTP?",
+        "options": ["300 ms", "350 ms", "400 ms", "600 ms"],
+        "answer": 1,
+        "explain": "RTT·(n+2) = 50 × 7 = 350 ms."
+      },
+      {
+        "q": "How much does persistent HTTP save over non-persistent for n referenced objects?",
+        "options": ["RTT", "2·RTT", "n·RTT", "(n+1)·RTT"],
+        "answer": 2,
+        "explain": "Exactly the n skipped connection setups."
+      },
+      {
+        "q": "10 req/s of 100 kbit objects over a 2 Mb/s access link, no cache. Utilization ρ?",
+        "options": ["0.05", "0.5", "5", "0.25"],
+        "answer": 1
+      },
+      {
+        "q": "Same link with a 50% cache hit rate. ρ?",
+        "options": ["0.5", "0.25", "0.1", "0.75"],
+        "answer": 1,
+        "explain": "ρ = (1−h)λL/R = 0.5 × 10⁶ / 2×10⁶ = 0.25."
+      },
+      {
+        "q": "Why can a bigger access link never beat a cache on average response time?",
+        "options": [
+          "Big links are unreliable",
+          "A bigger link lowers ρ but never removes the RTT to the origin; a cache removes it for every hit",
+          "Caches have infinite bandwidth",
+          "It can always beat a cache"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "u_s = 5u, F/u = 1 h, N = 20. Client–server distribution time (ignore download limits)?",
+        "options": ["1 h", "4 h", "20 h", "0.8 h"],
+        "answer": 1,
+        "explain": "NF/u_s = 20 / 5 = 4 h."
+      },
+      {
+        "q": "Same setup with P2P where each peer uploads u. Distribution time?",
+        "options": ["4 h", "0.2 h", "0.8 h (48 min)", "1 h"],
+        "answer": 2,
+        "explain": "Largest of F/u_s = 0.2 h and NF/(u_s + Σu_i) = 20/25 = 0.8 h."
+      },
+      {
+        "q": "How does client–server distribution time grow with N, compared to P2P?",
+        "options": [
+          "Both are constant",
+          "Client–server grows linearly; P2P flattens toward F/u",
+          "P2P grows linearly; client–server flattens",
+          "Both grow exponentially"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Raw rate of 1280 × 720 video at 24 bits/pixel and 30 fps?",
+        "options": ["≈ 66 Mb/s", "≈ 664 Mb/s", "≈ 1.5 Gb/s", "≈ 22 Mb/s"],
+        "answer": 1,
+        "explain": "1280 × 720 × 24 × 30 ≈ 663.6 × 10⁶ b/s."
+      },
+      {
+        "q": "A player has received 40 s of video and played 25 s. How much is buffered?",
+        "options": ["65 s", "15 s", "25 s", "40 s"],
+        "answer": 1
+      },
+      {
+        "q": "A record with TTL 6 h is cached at 10 a.m. and changed at 11 a.m. Until when can users see the old answer?",
+        "options": ["11 a.m.", "4 p.m.", "5 p.m.", "Forever"],
+        "answer": 1,
+        "explain": "Stale until t_cached + TTL = 10 a.m. + 6 h, not t_changed + TTL."
+      }
+    ],
+    "02-the-application-layer": [
+      {
+        "q": "What actually communicates across the network?",
+        "options": ["Hosts", "Processes", "Routers", "Switches"],
+        "answer": 1
+      },
+      {
+        "q": "A socket is…",
+        "options": [
+          "A physical port on a router",
+          "The API between an application process and the transport layer",
+          "A type of cable",
+          "A DNS record"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does a port number do?",
+        "options": [
+          "Gets the message to the right machine",
+          "Gets the message to the right process on that machine",
+          "Encrypts the message",
+          "Identifies the router interface"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which transport requirement can NO protocol buy you?",
+        "options": ["Data integrity", "A timing guarantee", "Both can be bought", "Reliability"],
+        "answer": 1,
+        "explain": "Timing and guaranteed throughput can't be bought; integrity is paid for by resending."
+      },
+      {
+        "q": "A multiplayer game sends positions 30×/s and a late position is useless. TCP or UDP?",
+        "options": [
+          "TCP — reliability matters most",
+          "UDP — retransmission would deliver something obsolete",
+          "Neither — use SMTP",
+          "TCP with TLS"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why does DNS use UDP?",
+        "options": [
+          "It needs encryption",
+          "The exchange (2 messages) is shorter than a TCP handshake + teardown (9)",
+          "UDP is more reliable",
+          "Routers require it"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is TLS?",
+        "options": [
+          "A third transport protocol",
+          "A library the application adds on top of a reliable connection for encryption, integrity and authentication",
+          "Part of IP",
+          "A DNS extension"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "HTTP being stateless is what…",
+        "options": [
+          "Makes shopping carts trivial",
+          "Let the Web scale — any machine behind a name can answer — and why carts need cookies",
+          "Requires UDP",
+          "Prevents caching"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "RTT includes which of these?",
+        "options": [
+          "Transmission time of the object",
+          "Propagation both ways plus queueing and processing",
+          "Only propagation one way",
+          "DNS lookup time"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why did HTTP/3 move to UDP via QUIC?",
+        "options": [
+          "It stopped needing reliability",
+          "With TCP, one lost packet stalls every HTTP/2 stream; QUIC does reliability per stream",
+          "UDP is encrypted",
+          "To drop headers"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which header has been mandatory in requests since HTTP/1.1, enabling virtual hosting?",
+        "options": ["User-Agent", "Host", "Accept", "Connection"],
+        "answer": 1
+      },
+      {
+        "q": "A hand-typed request is sent but the server never replies. Most likely cause?",
+        "options": [
+          "Wrong port",
+          "The blank line ending the headers was never sent",
+          "GET is not allowed",
+          "DNS failed"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A 5xx status means…",
+        "options": [
+          "You asked wrongly",
+          "You asked correctly and the server broke",
+          "Redirect",
+          "Success"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "You delete a shop's cookie from your browser. What happens to their database record about you?",
+        "options": ["It's deleted too", "Nothing — you threw away your key, not their record", "It's anonymized", "It's emailed to you"],
+        "answer": 1
+      },
+      {
+        "q": "Which cookie flag stops scripts from reading the session cookie?",
+        "options": ["Secure", "HttpOnly", "SameSite=Lax", "Max-Age"],
+        "answer": 1,
+        "explain": "Secure: encrypted connections only. SameSite=Lax: defends against CSRF."
+      },
+      {
+        "q": "How does a third-party ad network track you across sites?",
+        "options": [
+          "By reading your history",
+          "Via an embedded object (e.g. a 1×1 pixel) — each fetch carries its own cookie plus a Referer",
+          "Through DNS",
+          "Through SMTP"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In an iterated DNS query, who does all the asking?",
+        "options": ["The root server", "The local resolver", "The authoritative server", "The TLD server"],
+        "answer": 1
+      },
+      {
+        "q": "Why is iterated resolution used instead of recursive?",
+        "options": [
+          "Recursive is slower for the host",
+          "In recursive resolution the root ends up doing the most work",
+          "Iterated uses TCP",
+          "Recursive isn't allowed"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "With an empty cache, an iterated lookup of gaia.cs.umass.edu: how many queries does the resolver send, and which reply has the address?",
+        "options": [
+          "1; root",
+          "3; only the authoritative server's reply",
+          "2; the TLD's reply",
+          "8; every reply"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "\"DNS changes take 24–48 h to propagate.\" What's really happening?",
+        "options": [
+          "Records are copied server to server",
+          "Nothing propagates — records are live instantly; old cached copies take time to expire",
+          "Root servers update daily",
+          "Registrars batch changes"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which record type returns an address and ends the search?",
+        "options": ["NS", "CNAME", "MX", "A"],
+        "answer": 3
+      },
+      {
+        "q": "What ties a DNS reply to its question, and why is it a weakness?",
+        "options": [
+          "The TCP connection; it can't be forged",
+          "A 2-byte identification field over UDP — guess it and answer first, and you poison the cache",
+          "The TTL; it expires",
+          "The MX preference"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does DNSSEC do?",
+        "options": [
+          "Encrypts DNS answers",
+          "Signs records so forged answers fail — authenticates but doesn't hide, and doesn't stop flooding",
+          "Stops DDoS",
+          "Replaces UDP"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why does email need two protocols where the Web needed one?",
+        "options": [
+          "Email is older",
+          "The recipient isn't there when mail arrives — SMTP pushes to an always-on server, IMAP/POP pulls later",
+          "SMTP can't carry text",
+          "For encryption"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A message arrives with From: accounts@bank.example. What did the receiving server verify?",
+        "options": [
+          "That the sender owns bank.example",
+          "Nothing — it delivers on the envelope (MAIL FROM / RCPT TO) and never reads From:",
+          "The DKIM signature always",
+          "The sender's IP is a bank"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "You mark a message unread on your phone and your laptop shows it too. Which protocol?",
+        "options": ["POP", "IMAP", "SMTP", "HTTP"],
+        "answer": 1
+      },
+      {
+        "q": "A conditional GET with an unchanged object returns 304. What does it save?",
+        "options": ["Latency", "Bandwidth — the round trip is still paid", "Both", "Neither"],
+        "answer": 1
+      },
+      {
+        "q": "Why does BitTorrent cut files into pieces?",
+        "options": [
+          "To encrypt them",
+          "So peers have different things to trade and can upload within ~30 s of arriving",
+          "To fit in UDP",
+          "To satisfy the tracker"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the optimistic unchoke for?",
+        "options": [
+          "Punishing free riders",
+          "Giving a new peer with nothing a chance to show it will upload, and finding better partners",
+          "Picking the rarest piece",
+          "Contacting the tracker"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In DASH, who decides which quality to fetch next?",
+        "options": ["The server", "The client, chunk by chunk", "The CDN", "The ISP"],
+        "answer": 1
+      },
+      {
+        "q": "How does a CDN steer you to a nearby cluster?",
+        "options": [
+          "Routing changes",
+          "DNS: a CNAME into the CDN, whose name server picks a cluster based on the resolver's location",
+          "HTTP redirects only",
+          "Anycast at the IXP only"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A UDP server can't reply to the client. What did it most likely discard?",
+        "options": [
+          "The port number",
+          "The sender address returned by recvfrom",
+          "The welcoming socket",
+          "The TTL"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A TCP server closes the socket accept() returned. What happens to the next client?",
+        "options": [
+          "It can't connect",
+          "It connects normally — the welcoming socket is still listening",
+          "It gets a 404",
+          "The server crashes"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  "final": [
+    {
+      "q": "Host A sends to B on the same home network, then to a server in Toronto. Which device handles each?",
+      "options": [
+        "Router for both",
+        "Switch for the first (MAC); router for the second (IP)",
+        "Modem for both",
+        "Switch for both"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Host is a role, not a size. Which of these is a host?",
+      "options": ["A core router", "A switch", "A thermostat on Wi-Fi", "A modem"],
+      "answer": 2
+    },
+    {
+      "q": "A data center uses a leaf-spine mesh. If one spine fails, what happens?",
+      "options": ["The site goes offline", "Capacity halves; nothing goes dark", "Nothing changes", "Routing stops"],
+      "answer": 1
+    },
+    {
+      "q": "In an enterprise tree with one border router, the border router fails. What happens?",
+      "options": ["Traffic reroutes", "The site is offline", "Capacity halves", "Only Wi-Fi fails"],
+      "answer": 1
+    },
+    {
+      "q": "In FDM, user 3 goes silent. What happens to their band?",
+      "options": [
+        "It's given to others",
+        "It stays reserved and idle",
+        "It's split in half",
+        "It's released to the core"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Packet switching's price for supporting more users than circuit switching is…",
+      "options": ["Setup time", "Queueing delay and packet loss", "Fixed slots", "Higher cost per link"],
+      "answer": 1
+    },
+    {
+      "q": "In the ISP hierarchy, money flows ____ and routes flow ____.",
+      "options": ["down; up", "up; down", "sideways; up", "nowhere; everywhere"],
+      "answer": 1
+    },
+    {
+      "q": "Tier-1 ISPs…",
+      "options": [
+        "Buy transit from regional ISPs",
+        "Have global reach, buy transit from nobody, and peer settlement-free with each other",
+        "Serve only home users",
+        "Are content providers"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Doubling the packet size changes which delay?",
+      "options": ["Propagation", "Transmission", "Processing", "None"],
+      "answer": 1
+    },
+    {
+      "q": "Moving the receiver farther away changes which delay?",
+      "options": ["Transmission", "Propagation", "Processing", "Queueing"],
+      "answer": 1
+    },
+    {
+      "q": "A 1,500-byte packet on a 100 Mb/s link over 1,000 km of fiber, idle. One-way delay?",
+      "options": ["0.12 ms", "5.00 ms", "5.12 ms", "17 ms"],
+      "answer": 2,
+      "explain": "Trans 0.12 ms + prop 5.00 ms."
+    },
+    {
+      "q": "1,500-byte packet: link 1 at 100 Mb/s (1 ms prop), link 2 at 10 Mb/s (5 ms prop), link 3 at 50 Mb/s (2 ms prop). End-to-end delay?",
+      "options": ["8.00 ms", "9.56 ms", "1.56 ms", "10.2 ms"],
+      "answer": 1,
+      "explain": "Trans 0.12 + 1.20 + 0.24 = 1.56 ms; prop 8 ms."
+    },
+    {
+      "q": "Traffic intensity approaches 1. What happens to queueing delay?",
+      "options": ["Stays flat", "Rises steeply", "Drops to zero", "Becomes negative"],
+      "answer": 1
+    },
+    {
+      "q": "You upgrade a link that isn't the bottleneck. Throughput…",
+      "options": ["Doubles", "Doesn't change", "Halves", "Becomes unlimited"],
+      "answer": 1
+    },
+    {
+      "q": "Which device reads up to the network layer?",
+      "options": ["Switch", "Router", "Modem", "Hub"],
+      "answer": 1
+    },
+    {
+      "q": "The end-to-end principle says…",
+      "options": [
+        "Every router must open transport headers",
+        "Nothing in the middle opens the transport header — so layers above the link can change without touching switches",
+        "Only hosts run IP",
+        "All traffic goes through a tier-1"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Why can a brand new application (like the Web once was) be deployed without permission from network operators?",
+      "options": [
+        "Operators don't care",
+        "Application code only runs at the edge; routers carry messages but never run your code",
+        "It must use port 80",
+        "DNS approves it"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A bank transfer and a voice call have different needs. Which does the voice call tolerate?",
+      "options": ["Loss of some data", "Long delay", "Neither", "Both"],
+      "answer": 0
+    },
+    {
+      "q": "Which protocols run over TCP?",
+      "options": ["DNS and RTP", "HTTP/1.1, SMTP, IMAP", "QUIC", "All of them"],
+      "answer": 1
+    },
+    {
+      "q": "12 kB HTML + 10 × 60 kB images, 10 Mb/s, RTT 100 ms. Non-persistent ≈ 2.69 s, persistent ≈ 1.69 s. What dominates the slower time?",
+      "options": ["Content transmission", "Connection setups (round trips)", "DNS", "Processing"],
+      "answer": 1
+    },
+    {
+      "q": "HTTP/1.1's remaining problem that HTTP/2 addressed was…",
+      "options": [
+        "No persistent connections",
+        "Responses must return in order, so a slow one blocks those behind it",
+        "No headers",
+        "No caching"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which HTTP method is idempotent and stores the payload at exactly the given path?",
+      "options": ["GET", "POST", "PUT", "HEAD"],
+      "answer": 2
+    },
+    {
+      "q": "After login, what is the credential for the rest of the session?",
+      "options": ["The password, sent each time", "The session cookie", "The IP address", "The User-Agent"],
+      "answer": 1
+    },
+    {
+      "q": "A signed token in the cookie instead of a server-side session table makes what hard?",
+      "options": ["Scaling", "Early logout — the token stays valid until it expires", "Verification", "Statelessness"],
+      "answer": 1
+    },
+    {
+      "q": "Which of these is NOT a reason DNS isn't one central database?",
+      "options": [
+        "Every query on Earth at one door",
+        "Single point of failure",
+        "Everyone is far from it",
+        "DNS records are too large"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "A DNS flood against the root mostly fails. Why?",
+      "options": [
+        "Root servers are encrypted",
+        "Resolvers already cache TLD delegations, so caching is the defense",
+        "DNSSEC blocks it",
+        "UDP drops floods"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "When you register networkutopia.com, which records does the registrar write into the .com TLD server?",
+      "options": [
+        "Your MX and www records",
+        "An NS record and an A record for your name server",
+        "A CNAME only",
+        "Nothing"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "In SMTP, who speaks first?",
+      "options": ["The sending server", "The receiving server (220 ready)", "The user agent", "The DNS server"],
+      "answer": 1
+    },
+    {
+      "q": "Why are email attachments larger than the original file?",
+      "options": [
+        "Compression",
+        "SMTP was historically 7-bit text, so binary is encoded into printable characters",
+        "Headers are huge",
+        "TLS overhead"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Why can't email simply forbid forged From: lines?",
+      "options": [
+        "It would break DNS",
+        "The same envelope/letter split that allows forgery also makes forwarding and mailing lists work",
+        "SMTP is encrypted",
+        "Servers don't store headers"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A web cache acts as a ____ to the browser and a ____ to the origin on a miss.",
+      "options": ["client; server", "server; client", "router; switch", "peer; tracker"],
+      "answer": 1
+    },
+    {
+      "q": "Why does BitTorrent request the rarest piece first?",
+      "options": [
+        "It's fastest to download",
+        "Insurance — a piece down to one holder vanishes when that peer leaves",
+        "Politeness",
+        "The tracker requires it"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Why does a player buffer video before starting?",
+      "options": [
+        "To compress it",
+        "To absorb uneven network delivery so playback doesn't stall",
+        "To encrypt it",
+        "To check DNS"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Why does DASH pass through firewalls and proxies that blocked 1990s streaming protocols?",
+      "options": [
+        "It uses UDP",
+        "It's ordinary HTTP over TCP fetching stored files",
+        "It's encrypted",
+        "It uses port 53"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Akamai's \"enter deep\" strategy buys ____ at the cost of ____.",
+      "options": [
+        "fewer sites; longer paths",
+        "the shortest path to users; thousands of sites in networks it doesn't own",
+        "free transit; slower DNS",
+        "encryption; latency"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A user's DNS resolver is in another country, and the CDN serves them from there. Why?",
+      "options": [
+        "The CDN sees the resolver's location, not the user's",
+        "The user's IP is wrong",
+        "TTL expired",
+        "BGP misrouting"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "A TCP server uses a welcoming socket. What does accept() return?",
+      "options": [
+        "The same welcoming socket",
+        "A second, dedicated socket for this client",
+        "The client's IP only",
+        "A UDP socket"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "With a UDP socket, where is the destination address written?",
+      "options": ["Once in connect()", "On every message", "In the DNS record", "Nowhere"],
+      "answer": 1
+    }
+  ]
+}

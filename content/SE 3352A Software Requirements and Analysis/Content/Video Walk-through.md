@@ -1,0 +1,1 @@
+A **video walk-through** presents a candidate solution as video. People are visual and are drawn to images, especially moving ones, and many say they learn more easily from video (hence YouTube's popularity as a learning resource). That makes video an engaging way to show stakeholders how a proposed solution would work.

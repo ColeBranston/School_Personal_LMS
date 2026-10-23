@@ -1,0 +1,677 @@
+{
+  "modules": {
+    "01-intro-to-pm": [
+      {
+        "q": "A project is best defined as…",
+        "options": [
+          "An ongoing, repetitive activity that sustains an organization",
+          "A temporary endeavor to produce a unique product, service, or result",
+          "Any work assigned to a team",
+          "The quantifiable result of operations"
+        ],
+        "answer": 1,
+        "explain": "Temporary = defined start and end. Unique = not routine, repeated output."
+      },
+      {
+        "q": "Which of these is an example of operations rather than a project?",
+        "options": [
+          "Relocating IT infrastructure to the cloud",
+          "Developing a new medical device",
+          "Processing customer orders",
+          "Merging two organizations"
+        ],
+        "answer": 2,
+        "explain": "Operations are ongoing and repetitive: order processing, accounts receivable/payable, equipment maintenance."
+      },
+      {
+        "q": "What is the relationship between a project and a product?",
+        "options": [
+          "They are the same thing",
+          "The project is how you get there; the product is the quantifiable result you end up with",
+          "The product is temporary; the project is permanent",
+          "Operations produce the project"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Per PMI, project management is…",
+        "options": [
+          "Writing the project's code",
+          "The application of knowledge, skills, tools and techniques to project activities to meet project requirements",
+          "Approving the budget",
+          "Supervising operations staff"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which three approaches does PMI say teams use to deliver outcomes?",
+        "options": [
+          "Predictive, hybrid, adaptive",
+          "Waterfall, spiral, V-model",
+          "Initiating, planning, closing",
+          "Top-down, bottom-up, analogous"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Project management balances desired results against constraints. Which are the constraints in this framing?",
+        "options": ["Scope and quality", "Time and cost", "Performance and scope", "Stakeholders and vendors"],
+        "answer": 1,
+        "explain": "Desired results = scope, performance, quality. Constraints = time, cost."
+      },
+      {
+        "q": "Which is NOT one of the five competing factors every project must deliver on?",
+        "options": ["Scope", "Expectations", "Quality", "Headcount"],
+        "answer": 3,
+        "explain": "The five: scope, time, cost, quality, expectations (stakeholder approval)."
+      },
+      {
+        "q": "In the five competing factors, \"Expectations\" refers to…",
+        "options": ["The deadline", "Stakeholder approval", "The approved budget", "The deliverables"],
+        "answer": 1
+      },
+      {
+        "q": "Compressing a project's schedule is most likely to…",
+        "options": [
+          "Have no effect on other factors",
+          "Put pressure on cost or quality",
+          "Reduce scope automatically",
+          "Increase stakeholder approval"
+        ],
+        "answer": 1,
+        "explain": "The factors pull against each other — pulling on one affects the others."
+      }
+    ],
+    "02-the-project-manager": [
+      {
+        "q": "What does ITTO stand for?",
+        "options": [
+          "Inputs · Tools & Techniques · Outputs",
+          "Initiate · Track · Test · Operate",
+          "Integration · Time · Tasks · Objectives",
+          "Inputs · Timeline · Targets · Outcomes"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How many project management processes does PMI define?",
+        "options": ["10", "24", "49", "5"],
+        "answer": 2
+      },
+      {
+        "q": "Process groups describe the ____, while knowledge areas describe the ____.",
+        "options": ["what; when", "when (and how); what", "cost; scope", "team; stakeholders"],
+        "answer": 1
+      },
+      {
+        "q": "What is the correct order of the five process groups?",
+        "options": [
+          "Planning → Initiating → Executing → Closing → Monitoring & Controlling",
+          "Initiating → Planning → Executing → Monitoring & Controlling → Closing",
+          "Initiating → Executing → Planning → Closing → Monitoring & Controlling",
+          "Planning → Executing → Initiating → Monitoring & Controlling → Closing"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which process group hands off deliverables and archives lessons learned?",
+        "options": ["Executing", "Monitoring and Controlling", "Closing", "Initiating"],
+        "answer": 2
+      },
+      {
+        "q": "Which is NOT one of the ten knowledge areas?",
+        "options": ["Procurement", "Stakeholder", "Marketing", "Risk"],
+        "answer": 2,
+        "explain": "The ten: Integration, Scope, Schedule, Cost, Quality, Resource, Communications, Risk, Procurement, Stakeholder."
+      },
+      {
+        "q": "Which knowledge area \"does the most work\" and stitches the other nine together?",
+        "options": ["Scope", "Integration", "Stakeholder", "Risk"],
+        "answer": 1,
+        "explain": "Develop Project Charter, Develop PM Plan, Direct & Manage Work, Integrated Change Control and Close Project are all Integration."
+      },
+      {
+        "q": "The project management mindset's six principles fall into which three groups?",
+        "options": [
+          "Proactive, Ownership, Value-Driven",
+          "Plan, Do, Check",
+          "Scope, Time, Cost",
+          "Technical, Business, Power"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "\"Embed quality into processes and deliverables\" belongs to which mindset group?",
+        "options": ["Ownership", "Proactive", "Value-Driven", "Power skills"],
+        "answer": 1,
+        "explain": "Proactive: holistic view + embed quality. Ownership: accountable leader + empowered culture. Value-Driven: focus on value + sustainability."
+      },
+      {
+        "q": "In the sustainability pyramid, what is the preferred first option for a negative outcome?",
+        "options": ["Compensate / offset", "Restore", "Minimize", "Avoid"],
+        "answer": 3,
+        "explain": "Avoid → Minimize → Restore → Compensate/Offset (last resort)."
+      },
+      {
+        "q": "What are the three legs of the PMI Talent Triangle?",
+        "options": [
+          "Ways of Working, Business Acumen, Power Skills",
+          "Scope, Time, Cost",
+          "Initiating, Planning, Closing",
+          "Technical, Financial, Legal"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Performing ROI and NPV cost-benefit analyses falls under which Talent Triangle leg?",
+        "options": ["Ways of Working", "Business Acumen", "Power Skills", "None — that's the sponsor's job"],
+        "answer": 1
+      },
+      {
+        "q": "Selecting and tailoring a predictive, adaptive or hybrid delivery approach is part of…",
+        "options": ["Ways of Working", "Business Acumen", "Power Skills", "Procurement"],
+        "answer": 0
+      },
+      {
+        "q": "According to the notes, communication can take up to what share of a project manager's job?",
+        "options": ["10%", "50%", "90%", "25%"],
+        "answer": 2
+      }
+    ],
+    "03-project-initiation-part-1": [
+      {
+        "q": "Which two processes make up the Initiating process group?",
+        "options": [
+          "Develop Project Charter and Identify Stakeholders",
+          "Define Scope and Create WBS",
+          "Develop Project Management Plan and Collect Requirements",
+          "Identify Risks and Plan Risk Responses"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "A stakeholder is…",
+        "options": [
+          "Only someone who invests money in the project",
+          "An individual, group or organization that may affect, be affected, or perceive itself to be affected by the project",
+          "Only members of the development team",
+          "Only the end users"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Where are the findings of Identify Stakeholders recorded?",
+        "options": ["Risk register", "Stakeholder register", "Project charter", "WBS dictionary"],
+        "answer": 1
+      },
+      {
+        "q": "When can you stop identifying stakeholders?",
+        "options": [
+          "After the charter is signed",
+          "After planning is complete",
+          "Only after the project is closed",
+          "At go-live"
+        ],
+        "answer": 2,
+        "explain": "New stakeholders can surface even at deployment or when the product moves to operations."
+      },
+      {
+        "q": "Which stakeholder grid is the most common?",
+        "options": ["Impact and influence", "Power and influence", "Power and interest", "Salience model"],
+        "answer": 2
+      },
+      {
+        "q": "A stakeholder with high power can…",
+        "options": [
+          "Only request regular updates",
+          "Cancel the project or change its direction",
+          "Never influence the project",
+          "Only work as a vendor"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In a power/interest grid, \"interest\" refers to…",
+        "options": [
+          "How much the stakeholder likes the project",
+          "The level and frequency of information the stakeholder needs about the project",
+          "The stakeholder's financial investment",
+          "How urgent the stakeholder is"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "The salience model classifies stakeholders on which three variables?",
+        "options": [
+          "Power, legitimacy, urgency",
+          "Power, interest, influence",
+          "Impact, influence, interest",
+          "Scope, time, cost"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Influencing a vendor or supplier outside your organization is which direction of influence?",
+        "options": ["Upward", "Downward", "Sideward", "Outward"],
+        "answer": 3
+      },
+      {
+        "q": "Influencing a peer in another department who is neither above nor below you is…",
+        "options": ["Upward", "Sideward", "Outward", "Downward"],
+        "answer": 1
+      },
+      {
+        "q": "What does the project charter do?",
+        "options": [
+          "Lists every task with durations",
+          "Formally authorizes the project to begin, letting the PM apply organizational resources once the sponsor signs",
+          "Records all risks",
+          "Defines the detailed WBS"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which is NOT something the project charter records?",
+        "options": [
+          "Business justification",
+          "Measurable objectives and success criteria",
+          "Key deliverables, milestones, roles and responsibilities",
+          "The detailed activity network diagram"
+        ],
+        "answer": 3,
+        "explain": "The charter is high-level. The network diagram comes later from Sequence Activities."
+      },
+      {
+        "q": "In the major project constraints table, which constraint was added beyond the earlier five factors to capture uncertainty?",
+        "options": ["Risk", "Scope", "Quality", "Budget"],
+        "answer": 0
+      }
+    ],
+    "06-project-planning-part-1": [
+      {
+        "q": "How many of the 49 processes are in the Planning process group?",
+        "options": ["2", "10", "24", "12"],
+        "answer": 2,
+        "explain": "Initiating 2, Planning 24, Executing 10, Monitoring & Controlling 12, Closing 1."
+      },
+      {
+        "q": "Which knowledge area is the only one that reaches all five process groups?",
+        "options": ["Scope", "Integration", "Risk", "Stakeholder"],
+        "answer": 1
+      },
+      {
+        "q": "Which three baselines does the project management plan carry?",
+        "options": [
+          "Scope, schedule, cost",
+          "Risk, quality, procurement",
+          "Scope, risk, quality",
+          "Resource, communications, stakeholder"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "The scope baseline is made up of…",
+        "options": [
+          "Project charter + stakeholder register",
+          "Project scope statement + WBS + WBS dictionary",
+          "Activity list + milestone list",
+          "Cost estimates + funding requirements"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which process produces the requirements traceability matrix?",
+        "options": ["Define Scope", "Collect Requirements", "Plan Scope Management", "Create WBS"],
+        "answer": 1
+      },
+      {
+        "q": "\"Include course creation and assessment features; explicitly record the excluded capabilities\" is an example of which process?",
+        "options": ["Collect Requirements", "Define Scope", "Create WBS", "Plan Quality Management"],
+        "answer": 1
+      },
+      {
+        "q": "\"Gradebook integration has to be done before end-to-end acceptance testing can begin\" is an output of thinking from which process?",
+        "options": ["Define Activities", "Sequence Activities", "Estimate Activity Durations", "Develop Schedule"],
+        "answer": 1,
+        "explain": "Sequence Activities identifies dependencies; output is the project schedule network diagram."
+      },
+      {
+        "q": "Which process rolls up cost estimates and sets the authorized cost baseline?",
+        "options": ["Estimate Costs", "Plan Cost Management", "Determine Budget", "Develop Schedule"],
+        "answer": 2
+      },
+      {
+        "q": "Which process produces the team charter?",
+        "options": ["Plan Resource Management", "Develop Project Charter", "Plan Communications Management", "Estimate Activity Resources"],
+        "answer": 0
+      },
+      {
+        "q": "Logging \"early pilot recruitment\" in the risk register shows that…",
+        "options": [
+          "Risks are only threats",
+          "Risks include opportunities (positive uncertainty) as well as threats",
+          "The register is only for vendors",
+          "It belongs in the issue log instead"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What distinguishes qualitative from quantitative risk analysis?",
+        "options": [
+          "Qualitative is optional; quantitative is always done",
+          "Qualitative ranks individual risks and is always done; quantitative models combined numeric effect and is optional",
+          "They are identical",
+          "Quantitative happens before Identify Risks"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Deciding whether to buy a video integration service and setting selection criteria is…",
+        "options": ["Plan Procurement Management", "Plan Resource Management", "Estimate Costs", "Plan Scope Management"],
+        "answer": 0
+      },
+      {
+        "q": "A previous portal cost $80,000 and the new one needs 25% more effort. Analogous estimation gives…",
+        "options": ["$60,000", "$100,000", "$105,000", "$80,025"],
+        "answer": 1
+      },
+      {
+        "q": "Using PERT, a task has O = 10, M = 15, P = 26 hours. What is E?",
+        "options": ["15 hours", "16 hours", "17 hours", "17.5 hours"],
+        "answer": 1,
+        "explain": "E = (O + 4M + P) / 6 = (10 + 60 + 26) / 6 = 96 / 6 = 16."
+      },
+      {
+        "q": "In Basic COCOMO, size is measured in ____ and effort in ____.",
+        "options": [
+          "function points; hours",
+          "KLOC; person-months",
+          "story points; sprints",
+          "lines of code; calendar months"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "An aircraft control system with strict timing constraints is a typical ____ COCOMO project.",
+        "options": ["Organic", "Semi-detached", "Embedded", "Parametric"],
+        "answer": 2,
+        "explain": "Coefficients a/b: organic 2.4/1.05, semi-detached 3.0/1.12, embedded 3.6/1.20."
+      },
+      {
+        "q": "135 function points at 12 hours per FP gives an effort of…",
+        "options": ["147 hours", "1,350 hours", "1,620 hours", "11.25 hours"],
+        "answer": 2
+      },
+      {
+        "q": "Why use function point estimation instead of COCOMO early on?",
+        "options": [
+          "It needs lines of code",
+          "It measures functionality delivered to users, so it works before the language/implementation is finalized",
+          "It is always more accurate",
+          "It ignores requirements"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which estimation method is described as detailed and transparent but time-consuming?",
+        "options": ["Expert judgment", "Analogous", "Bottom-up", "Three-point"],
+        "answer": 2
+      }
+    ]
+  },
+  "final": [
+    {
+      "q": "Writing a book is a project, but printing the same newspaper every day is operations. What makes the difference?",
+      "options": [
+        "Budget size",
+        "The book is temporary and unique; the newspaper is ongoing and repetitive",
+        "The number of people involved",
+        "Whether software is used"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A sponsor demands the same scope two months earlier with no extra budget. Which factor is most likely to suffer?",
+      "options": ["Quality", "The charter", "Process groups", "Stakeholder register"],
+      "answer": 0,
+      "explain": "With scope, time and cost fixed, quality (or expectations) absorbs the pressure."
+    },
+    {
+      "q": "Every one of PMI's 49 processes sits at the intersection of…",
+      "options": [
+        "A process group and a knowledge area",
+        "A stakeholder and a risk",
+        "A phase and a sprint",
+        "A baseline and a plan"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "\"Measure progress and evaluate changes against the plan\" describes which process group?",
+      "options": ["Executing", "Planning", "Monitoring and Controlling", "Closing"],
+      "answer": 2
+    },
+    {
+      "q": "Perform Integrated Change Control belongs to which knowledge area and process group?",
+      "options": [
+        "Scope / Planning",
+        "Integration / Monitoring & Controlling",
+        "Risk / Executing",
+        "Integration / Closing"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A PM who owns the project outcome, not just the assigned tasks, is following which principle?",
+      "options": ["Focus on value", "Be an accountable leader", "Adopt a holistic view", "Build an empowered culture"],
+      "answer": 1
+    },
+    {
+      "q": "A team judges its work by tickets closed rather than benefit delivered. Which principle are they missing?",
+      "options": ["Focus on value", "Embed quality", "Empowered culture", "Holistic view"],
+      "answer": 0
+    },
+    {
+      "q": "A project can't avoid some e-waste, so it reduces it as much as possible. Which sustainability pyramid level is this?",
+      "options": ["Avoid", "Minimize", "Restore", "Offset"],
+      "answer": 1
+    },
+    {
+      "q": "The 49-process / 5-group structure comes from which PMBOK edition?",
+      "options": ["Sixth", "Seventh", "Eighth", "Fifth"],
+      "answer": 0,
+      "explain": "The project management mindset comes from the Eighth Edition."
+    },
+    {
+      "q": "Resolving a conflict between two developers with empathy and emotional intelligence is a ____ skill.",
+      "options": ["Ways of Working", "Business Acumen", "Power", "Procurement"],
+      "answer": 2
+    },
+    {
+      "q": "Keeping project objectives aligned with the organization's broader strategy is part of…",
+      "options": ["Power skills", "Business acumen", "Ways of working", "Quality management"],
+      "answer": 1
+    },
+    {
+      "q": "Which input is used to develop the project charter?",
+      "options": ["Business documents", "Risk register", "WBS", "Schedule baseline"],
+      "answer": 0
+    },
+    {
+      "q": "The charter is signed. What can the project manager now do?",
+      "options": [
+        "Close the project",
+        "Apply organizational resources to project activities",
+        "Skip planning",
+        "Stop identifying stakeholders"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "The CFO can cancel your project but rarely asks for updates. On a power/interest grid they are…",
+      "options": ["High power, high interest", "High power, low interest", "Low power, high interest", "Low power, low interest"],
+      "answer": 1
+    },
+    {
+      "q": "In the salience model, \"legitimacy\" means…",
+      "options": [
+        "The stakeholder has legal authority",
+        "The stakeholder is appropriately involved in or impacted by the project",
+        "The stakeholder needs immediate attention",
+        "The stakeholder pays for the project"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Persuading senior management to approve extra testing time is which direction of influence?",
+      "options": ["Upward", "Downward", "Sideward", "Outward"],
+      "answer": 0
+    },
+    {
+      "q": "Influencing is described as…",
+      "options": [
+        "Forcing people to comply",
+        "Winning people over to do what's best for the project",
+        "Escalating every issue",
+        "Only possible with authority"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Plan Stakeholder Engagement is the follow-on to which Initiating process?",
+      "options": ["Develop Project Charter", "Identify Stakeholders", "Collect Requirements", "Define Scope"],
+      "answer": 1
+    },
+    {
+      "q": "Most knowledge areas open with a \"Plan X Management\" process. What does it do?",
+      "options": [
+        "Produces the final deliverable",
+        "Sets the rules for how X will be defined, estimated and controlled",
+        "Closes the project",
+        "Signs the charter"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Why do planning processes repeat throughout the project?",
+      "options": [
+        "PMI requires weekly replanning",
+        "Plans get revisited whenever new information comes in",
+        "Because the charter expires",
+        "They don't — planning runs once"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "\"Decompose the assessment module into work packages for quizzes and rubrics\" is…",
+      "options": ["Define Activities", "Create WBS", "Define Scope", "Estimate Costs"],
+      "answer": 1
+    },
+    {
+      "q": "Which process works out which activities are needed for each WBS work package?",
+      "options": ["Define Activities", "Sequence Activities", "Develop Schedule", "Plan Schedule Management"],
+      "answer": 0
+    },
+    {
+      "q": "Develop Schedule combines which inputs?",
+      "options": [
+        "Activities, dependencies, durations and resource constraints",
+        "Risks and opportunities",
+        "Stakeholders and the charter",
+        "Quality metrics and acceptance tests"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "\"Define accessibility checks, response-time targets and acceptance tests\" is…",
+      "options": ["Plan Quality Management", "Collect Requirements", "Plan Risk Management", "Estimate Activity Resources"],
+      "answer": 0
+    },
+    {
+      "q": "\"Schedule regular sponsor updates and summaries of pilot feedback\" is…",
+      "options": ["Plan Stakeholder Engagement", "Plan Communications Management", "Manage Communications", "Identify Stakeholders"],
+      "answer": 1
+    },
+    {
+      "q": "\"Rank privacy approval delays higher than minor interface polish concerns\" is…",
+      "options": ["Identify Risks", "Perform Qualitative Risk Analysis", "Perform Quantitative Risk Analysis", "Plan Risk Responses"],
+      "answer": 1
+    },
+    {
+      "q": "\"Model the probability of missing the semester launch date\" is…",
+      "options": ["Plan Risk Management", "Perform Quantitative Risk Analysis", "Develop Schedule", "Monitor Risks"],
+      "answer": 1
+    },
+    {
+      "q": "\"Assign a mitigation owner to the privacy approval risk\" is…",
+      "options": ["Identify Risks", "Plan Risk Responses", "Implement Risk Responses", "Plan Risk Management"],
+      "answer": 1
+    },
+    {
+      "q": "Why is software cost estimation especially hard?",
+      "options": [
+        "Developers refuse to estimate",
+        "Software projects are highly dynamic and don't repeat from one project to the next",
+        "There are no estimation methods",
+        "Costs are fixed by law"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Early in a project there are no detailed requirements, but you have experienced experts and data from similar projects. Which pair of methods fits?",
+      "options": [
+        "Bottom-up and COCOMO",
+        "Expert judgment and analogous estimation",
+        "Function points and bottom-up",
+        "Three-point and COCOMO"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A task could take 4, 6 or 14 days. What is the PERT estimate?",
+      "options": ["6 days", "7 days", "8 days", "6.5 days"],
+      "answer": 1,
+      "explain": "(4 + 4×6 + 14) / 6 = 42 / 6 = 7."
+    },
+    {
+      "q": "You have reliable KLOC estimates and calibrated coefficients. Which method fits?",
+      "options": ["Parametric (COCOMO)", "Expert judgment", "Analogous", "Function points"],
+      "answer": 0
+    },
+    {
+      "q": "In Basic COCOMO, how is duration calculated?",
+      "options": [
+        "Duration = a × KLOC^b",
+        "Duration = c × Effort^d",
+        "Duration = FP × hours per FP",
+        "Duration = (O + 4M + P) / 6"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What determines a project's COCOMO category?",
+      "options": [
+        "The application domain alone",
+        "The development environment and constraints, not just the kind of application",
+        "The number of stakeholders",
+        "The budget"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Which is NOT one of the five function types in function point estimation?",
+      "options": ["External inputs", "Internal logical files", "Lines of code", "External interface files"],
+      "answer": 2
+    },
+    {
+      "q": "Which method's main limitation is that it's subjective?",
+      "options": ["Expert judgment", "Bottom-up", "COCOMO", "Function points"],
+      "answer": 0
+    },
+    {
+      "q": "Which method's main advantage is that it explicitly addresses uncertainty?",
+      "options": ["Analogous", "Three-point / PERT", "Bottom-up", "Expert judgment"],
+      "answer": 1
+    }
+  ]
+}

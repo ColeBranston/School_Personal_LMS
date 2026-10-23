@@ -1,0 +1,960 @@
+{
+  "modules": {
+    "01-about-se-3316": [
+      {
+        "q": "What is the hard gate for passing SE 3316?",
+        "options": [
+          "Passing the midterm",
+          "More than 50% of the total lab mark",
+          "Attending every lecture",
+          "Completing all 10 quizzes"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which lab carries the most weight of the lab mark?",
+        "options": ["Lab 1 — HTML & CSS", "Lab 2 — JavaScript", "Lab 3 — ReST", "Lab 4 — Web app"],
+        "answer": 3,
+        "explain": "Lab 1 15%, Lab 2 10%, Lab 3 24%, Lab 4 51%."
+      },
+      {
+        "q": "Which three steps are ALL required for a lab grade?",
+        "options": [
+          "Submit commit log + zip on Owl, submit repo to GitHub Classroom, demo in lab",
+          "Email the TA, push to GitHub, write a report",
+          "Submit a zip only",
+          "Demo in lab only"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "How do weekly quizzes count?",
+        "options": [
+          "All 10 count",
+          "Best 8 of 10, in class only, no make-ups",
+          "Best 5 of 10",
+          "They can be taken at home"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is the lab session loop?",
+        "options": [
+          "Push → Develop → Pull → Commit",
+          "Pull (start) → Develop/Test → Commit → Push (end)",
+          "Commit → Pull → Push → Develop",
+          "Develop → Push → Pull"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In the lab environment, what is the single source of truth between machines?",
+        "options": ["Your laptop", "The lab workstation", "GitHub", "AWS"],
+        "answer": 2
+      },
+      {
+        "q": "Lecture notes describe the effect for a given cause. How do quiz and exam questions typically go?",
+        "options": [
+          "The same way — cause to effect",
+          "The other way — given an effect, name the cause",
+          "They only test definitions",
+          "They test memorized slide numbers"
+        ],
+        "answer": 1,
+        "explain": "That's why memorizing the notes is the wrong strategy — root cause analysis builds the right direction."
+      },
+      {
+        "q": "What is root cause analysis in this course's sense?",
+        "options": [
+          "Patching until the symptom disappears",
+          "Tracing a failure back to why it happened, treating it as a gap in your understanding",
+          "Asking the TA to debug",
+          "Rewriting the code from scratch"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What's the right way to use code found online or from an LLM?",
+        "options": [
+          "Copy, run, profit",
+          "Read it, test it separately until you understand it, then write your own code",
+          "Paste it and add comments",
+          "Avoid all online code"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What is step 1 of the instructor's approach to learning a new technology?",
+        "options": [
+          "Do a small tutorial",
+          "Read voraciously: what problem it solves, alternatives, why this one, pitfalls",
+          "Apply it to your whole project",
+          "Scale up immediately"
+        ],
+        "answer": 1,
+        "explain": "Step 1 is about judgement (is this the right tool?), then tutorial, apply narrowly, scale up."
+      },
+      {
+        "q": "Which server-side runtime and framework does the course use?",
+        "options": ["Python + Django", "Node.js + Express", "Java + Spring", "PHP + Laravel"],
+        "answer": 1
+      }
+    ],
+    "02-html-and-css": [
+      {
+        "q": "Who coined the term \"hypertext\" and when?",
+        "options": ["Tim Berners-Lee, 1989", "Ted Nelson, 1968", "Vannevar Bush, 1945", "Paul Otlet, 1934"],
+        "answer": 1
+      },
+      {
+        "q": "What was Tim Berners-Lee's actual contribution in 1989?",
+        "options": [
+          "Inventing the concept of hypertext",
+          "A working implementation of hypertext across a network",
+          "Inventing SGML",
+          "Inventing CSS"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What are the three constituents of the World Wide Web?",
+        "options": ["HTML, URL, HTTP", "HTML, CSS, JavaScript", "TCP, IP, DNS", "SGML, XML, HTML"],
+        "answer": 0
+      },
+      {
+        "q": "What was the key to the web's success?",
+        "options": [
+          "Its speed",
+          "HTML, URL and HTTP were all vendor neutral",
+          "Microsoft's backing",
+          "It required no servers"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "HTML describes a document's ____, and browsers are free to interpret tags differently when rendering.",
+        "options": ["Visual appearance", "Logical structure", "Network address", "Behaviour"],
+        "answer": 1
+      },
+      {
+        "q": "In http://example.com/ex/one/, what is example.com?",
+        "options": ["Scheme", "Server", "Path", "Fragment"],
+        "answer": 1
+      },
+      {
+        "q": "urn:isbn:0-471-94128-X is a URN. What distinguishes a URN from a URL?",
+        "options": [
+          "A URN names a resource without saying where it is; a URL says where it lives",
+          "A URN is always longer",
+          "A URN can only be used for books",
+          "There is no difference"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "A user sees www.apple.com with a valid padlock, but the real URL is https://www.xn--80ak6aa92e.com/. What attack is this?",
+        "options": ["CSRF", "IDN homograph attack", "Session hijacking", "SQL injection"],
+        "answer": 1,
+        "explain": "A Cyrillic 'а' looks identical to Latin 'a'. A valid TLS cert proves you reached that domain, not the one you think you read."
+      },
+      {
+        "q": "In a URI, what does # separate?",
+        "options": [
+          "Levels of hierarchy",
+          "A query",
+          "The fragment identifier",
+          "The scheme"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Which data flow model lets a page update without reloading?",
+        "options": [
+          "Static pages",
+          "Server-side processing",
+          "Server + client-side processing with asynchronous JavaScript calls",
+          "FTP"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "How do you write the < character in HTML content?",
+        "options": ["\\<", "&lt;", "<<", "%3C"],
+        "answer": 1
+      },
+      {
+        "q": "Radio buttons vs checkboxes with the same name:",
+        "options": [
+          "Both allow many choices",
+          "Radio: one choice; checkbox: many choices",
+          "Radio: many; checkbox: one",
+          "Both allow one choice"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which way of attaching CSS is the \"good\" one?",
+        "options": [
+          "Inline style attributes",
+          "A <style> tag in the head",
+          "An external stylesheet linked with <link>",
+          "Using <font> tags"
+        ],
+        "answer": 2,
+        "explain": "External: one file styles the whole site, it's cached, and designers can edit it without touching markup."
+      },
+      {
+        "q": "What does the selector E > F match?",
+        "options": [
+          "Any F descendant of E at any depth",
+          "Any F that is a direct child of E",
+          "An E with class F",
+          "An adjacent sibling"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Rules: b {red} · b b {blue} · b.foo {green} · b b.foo {yellow}. What colour is <b class=\"foo\"> nested inside another <b>?",
+        "options": ["Red", "Blue", "Green", "Yellow"],
+        "answer": 3,
+        "explain": "The most specific selector wins, not the last one written. b b.foo beats b.foo."
+      },
+      {
+        "q": "Why does so much invalid HTML exist on the web?",
+        "options": [
+          "There is no HTML standard",
+          "Forgiving browsers interpret invalid input rather than rejecting it (plus ignorance, lack of testing, tools)",
+          "Validators don't exist",
+          "HTML5 requires it"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "How does HTML5 deal with invalid markup?",
+        "options": [
+          "It rejects it",
+          "It standardizes the error handling, defining how broken markup is parsed",
+          "It ignores it",
+          "It converts it to XHTML"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "HIRAGANA LETTER SA is U+3055. What does U+3055 represent?",
+        "options": ["A glyph", "A code point", "A byte sequence", "A font"],
+        "answer": 1,
+        "explain": "Character → number is the code point. Number → picture is the glyph. Number → bytes is the encoding."
+      },
+      {
+        "q": "In UTF-8, a first byte starting with 1110 means…",
+        "options": ["1 code unit", "2 code units", "3 code units", "4 code units"],
+        "answer": 2
+      },
+      {
+        "q": "Why is ASCII text automatically valid UTF-8?",
+        "options": [
+          "UTF-8 ignores ASCII",
+          "Code points 0–127 coincide with ASCII and are encoded as a single byte 0XXXXXXX",
+          "ASCII uses 2 bytes",
+          "UTF-8 has a BOM"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why does UTF-16 begin with a byte order mark?",
+        "options": [
+          "To mark it as HTML",
+          "Its code unit is 2 bytes, so the reader must know whether bytes are big- or little-endian",
+          "To compress the text",
+          "It's required by HTTP"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "A page shows garbled characters (mojibake) even though the bytes are correct. What is the root cause?",
+        "options": [
+          "A broken font",
+          "The page's character encoding was interpreted incorrectly (wrong or missing charset declaration)",
+          "A slow network",
+          "Invalid CSS"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "In Java, why is String.length() wrong for characters above 65,536?",
+        "options": [
+          "Java uses UTF-8",
+          "Java strings count UTF-16 code units, and those characters need a surrogate pair (2 units)",
+          "Java can't store them",
+          "It's a bug in the JVM"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which organization has maintained the HTML spec as a living standard since 2019?",
+        "options": ["W3C", "WHATWG", "IETF", "IANA"],
+        "answer": 1
+      }
+    ],
+    "03-javascript": [
+      {
+        "q": "JavaScript's object model is…",
+        "options": ["Class-based like Java", "Prototype-based", "Not object-oriented", "Struct-based"],
+        "answer": 1
+      },
+      {
+        "q": "What is fail-safe design?",
+        "options": [
+          "Catching all exceptions",
+          "Providing functional replacements for users without JavaScript",
+          "Using strict mode",
+          "Using TypeScript"
+        ],
+        "answer": 1,
+        "explain": "e.g. using <noscript>. Crawlers, text browsers and screen readers may not run JS."
+      },
+      {
+        "q": "What does AJAX allow?",
+        "options": [
+          "Server-side rendering",
+          "Asynchronous data requests from the browser so the page updates without a full reload",
+          "Compiling JavaScript",
+          "Styling pages"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which way of including JavaScript is best?",
+        "options": [
+          "Inline in an onClick attribute",
+          "Embedded in a <script> block",
+          "An external .js file via <script src>",
+          "document.write"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "A script silently does nothing and the user sees no error. What's the likely cause and fix?",
+        "options": [
+          "The server is down; restart it",
+          "Browsers largely ignore JS errors — open the developer tools console to see the error",
+          "CSS is broken",
+          "The HTML is too long"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does === test?",
+        "options": ["Equality with type coercion", "Equality of value and type", "Assignment", "Reference identity only"],
+        "answer": 1
+      },
+      {
+        "q": "Which keyword is recommended for declaring variables because it obeys block scope?",
+        "options": ["var", "let", "No keyword", "global"],
+        "answer": 1
+      },
+      {
+        "q": "A variable assigned with no keyword (x = 42;) is…",
+        "options": ["Block-scoped", "Function-scoped", "Always global", "A constant"],
+        "answer": 2
+      },
+      {
+        "q": "Which value is truthy?",
+        "options": ["0", "\"\"", "NaN", "\"false\""],
+        "answer": 3,
+        "explain": "The falsy values are exactly false, null, \"\", '', 0, NaN and undefined. The string \"false\" is non-empty, so truthy."
+      },
+      {
+        "q": "With \"use strict\", assigning to a mistyped variable tehCost instead of theCost…",
+        "options": [
+          "Silently creates a new global",
+          "Throws an error",
+          "Is ignored",
+          "Renames theCost"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why does 0.1 + 0.2 not exactly equal 0.3 in JavaScript?",
+        "options": [
+          "A browser bug",
+          "JS has no integer type — only floating-point number — so rounding errors appear",
+          "Strict mode",
+          "Type coercion"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which way of declaring a function should be avoided because it causes many problems?",
+        "options": ["Declaration", "Expression", "IIFE", "new Function(…) constructor with the body as a string"],
+        "answer": 3
+      },
+      {
+        "q": "An arrow function does NOT have its own…",
+        "options": ["Parameters", "Return value", "this", "Body"],
+        "answer": 2,
+        "explain": "Arrow functions have no own this, super, new.target or arguments."
+      },
+      {
+        "q": "A function passed into another function to be invoked later is a…",
+        "options": ["Constructor", "Callback", "Prototype", "Closure"],
+        "answer": 1
+      },
+      {
+        "q": "In JavaScript, scope is determined…",
+        "options": [
+          "At runtime by the caller",
+          "At design-time — lexically, by where code is written",
+          "By the browser",
+          "Randomly"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "console.log(myString) runs before var myString = 'Hello' in the same function. What is printed?",
+        "options": ["'Hello'", "undefined", "ReferenceError", "null"],
+        "answer": 1,
+        "explain": "The declaration is hoisted, not the initialization."
+      },
+      {
+        "q": "Calling a function expression stored in a var before its assignment line gives \"calculateTax is not a function\". Why?",
+        "options": [
+          "Function expressions aren't allowed",
+          "Only the var declaration is hoisted; the assignment stays in place, so it's still undefined",
+          "Strict mode blocks it",
+          "The function has a typo"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What happens when you call a function with new?",
+        "options": [
+          "Nothing special",
+          "A new empty object is created, bound as this, and returned (if no return statement)",
+          "The function is copied",
+          "A class is defined"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "setType(car, 'TVR') sets v.type inside the function. After the call, car.type is 'TVR'. Why?",
+        "options": [
+          "Primitives are passed by reference",
+          "Objects are passed by reference, so the original is modified",
+          "setType returns the object",
+          "Hoisting"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why attach randomRoll to Die.prototype instead of defining it inside the constructor?",
+        "options": [
+          "It runs faster once",
+          "One shared copy instead of a duplicate method on every instance",
+          "Prototypes are required by strict mode",
+          "So it can't be called"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which is safer for inserting simple text into an element?",
+        "options": ["innerHTML", "innerText", "document.write", "eval"],
+        "answer": 1,
+        "explain": "innerHTML is fast but risks injecting unvalidated markup."
+      },
+      {
+        "q": "querySelectorAll() returns…",
+        "options": ["A live NodeList", "A static (not live) NodeList", "A single element", "An array of strings"],
+        "answer": 1
+      },
+      {
+        "q": "Why prefer addEventListener over setting myButton.onclick?",
+        "options": [
+          "It's shorter",
+          "It chains multiple handlers instead of overwriting the previous one",
+          "onclick doesn't exist",
+          "It runs before page load"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Code touching an element errors because the element isn't loaded yet. Where should initialization go?",
+        "options": ["window.onload", "Inside <head> directly", "document.write", "A CSS file"],
+        "answer": 0
+      },
+      {
+        "q": "What is the order of keyboard events?",
+        "options": [
+          "keyup → keydown → keypress",
+          "keydown → keypress → keyup",
+          "keypress → keydown → keyup",
+          "keydown → keyup → keypress"
+        ],
+        "answer": 1
+      }
+    ],
+    "04-the-http-protocol": [
+      {
+        "q": "Which is NOT one of HTTP's four defining traits?",
+        "options": ["Client–server", "Request–response", "Stateful", "Carried over TCP"],
+        "answer": 2,
+        "explain": "HTTP is stateless — each request stands alone."
+      },
+      {
+        "q": "HTTP's two big limitations and their fixes are…",
+        "options": [
+          "Speed → HTTP/2; size → compression",
+          "Statelessness → session management; no security → SSL/TLS",
+          "Text-based → binary; ports → DNS",
+          "No caching → CDNs; no forms → JavaScript"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "IP delivery is…",
+        "options": ["Guaranteed and ordered", "Best-effort, not guaranteed", "Encrypted", "Connection-oriented"],
+        "answer": 1
+      },
+      {
+        "q": "Which IPv4 range is private address space?",
+        "options": ["8.8.8.0 – 8.8.8.255", "192.168.0.0 – 192.168.255.255", "142.108.0.0 – 142.108.255.255", "1.1.1.0 – 1.1.1.255"],
+        "answer": 1
+      },
+      {
+        "q": "How is FF01:0:0:0:0:0:0:43 written in compressed IPv6 form?",
+        "options": ["FF01::43", "FF01:43", "FF01:0::43:0", "::FF01:43"],
+        "answer": 0
+      },
+      {
+        "q": "A TCP socket is identified by…",
+        "options": ["A domain name", "An (IP address, port number) pair", "A MAC address", "A URL"],
+        "answer": 1
+      },
+      {
+        "q": "In the TCP example, ACK 2 never arrives. What does the sender do?",
+        "options": ["Give up", "Resend packet 2", "Send ACK 2 itself", "Restart the connection"],
+        "answer": 1
+      },
+      {
+        "q": "HTTPS uses which default port?",
+        "options": ["80", "8080", "443", "22"],
+        "answer": 2
+      },
+      {
+        "q": "One domain name maps to multiple IP addresses. This enables…",
+        "options": ["Virtual hosting", "Load balancing", "Private addressing", "Pipelining"],
+        "answer": 1,
+        "explain": "Load balancing = one domain → many IPs. Virtual hosting = many domains → one IP."
+      },
+      {
+        "q": "How does an HTTP server know the request headers are finished?",
+        "options": ["A blank line", "Content-Length", "The connection closes", "A special END header"],
+        "answer": 0
+      },
+      {
+        "q": "A request for /foo maps to a directory. What does the server look for?",
+        "options": ["foo.html", "index.html (or index.htm)", "default.css", "Nothing — 404"],
+        "answer": 1
+      },
+      {
+        "q": "In Accept-Language: en-US,en;q=0.5, what does q=0.5 mean?",
+        "options": ["Quality of service", "A preference weight between 0 and 1", "Query number 5", "Timeout"],
+        "answer": 1
+      },
+      {
+        "q": "Which two methods must every HTTP server implement?",
+        "options": ["GET and POST", "GET and HEAD", "POST and PUT", "OPTIONS and TRACE"],
+        "answer": 1
+      },
+      {
+        "q": "Which methods are idempotent but NOT safe?",
+        "options": ["GET, HEAD", "PUT, DELETE", "POST, PATCH", "OPTIONS, TRACE"],
+        "answer": 1
+      },
+      {
+        "q": "A user double-clicks \"Place order\" and gets charged twice. Which property of POST explains this?",
+        "options": [
+          "POST is safe",
+          "POST is not idempotent",
+          "POST is cacheable",
+          "POST uses the URL"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which status code class means a client error?",
+        "options": ["2xx", "3xx", "4xx", "5xx"],
+        "answer": 2
+      },
+      {
+        "q": "A form with <option value=\"med\">Medium</option> is submitted with Medium selected. What is sent?",
+        "options": ["foo_sel=Medium", "foo_sel=med", "Medium", "foo_sel=1"],
+        "answer": 1
+      },
+      {
+        "q": "A login form uses method=\"get\". What is the risk?",
+        "options": [
+          "It can't be submitted",
+          "The password appears in the URL — visible in history, logs and bookmarks",
+          "It's slower",
+          "It can't use TLS"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Why can a GET request be bookmarked and cached but a POST can't?",
+        "options": [
+          "GET is newer",
+          "GET's data is all in the URL and GET is safe (no side effects), so replaying it is harmless",
+          "POST is encrypted",
+          "Browsers forbid it"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "QWxhZGRpbjpvcGVuIHNlc2FtZQ== in an HTTP Basic Authorization header is…",
+        "options": [
+          "Encrypted with AES",
+          "Base64 of username:password — encoding, not encryption",
+          "An MD5 hash",
+          "A TLS certificate"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What's the recommended way to make HTTP Basic auth acceptable?",
+        "options": ["Use Digest instead", "Use it over HTTPS", "Use a longer password", "Use GET"],
+        "answer": 1,
+        "explain": "Digest relies on MD5, which is broken. Basic over HTTPS lets TLS do the protecting."
+      },
+      {
+        "q": "Which Cache-Control directive forbids storing a copy anywhere?",
+        "options": ["no-cache", "no-store", "private", "must-revalidate"],
+        "answer": 1,
+        "explain": "no-cache allows a copy but forces revalidation before each reuse."
+      },
+      {
+        "q": "A server returns 206 Partial Content. What did the client send?",
+        "options": ["A Range header", "A POST", "Connection: close", "An If-Modified-Since header"],
+        "answer": 0
+      },
+      {
+        "q": "Why does Content-Length become important with persistent connections?",
+        "options": [
+          "For caching",
+          "With the connection open, it's the only way to know where one response ends and the next begins",
+          "For compression",
+          "For authentication"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "What does HTTP/2 change?",
+        "options": [
+          "The methods and status codes",
+          "How HTTP is expressed on the wire — binary, multiplexed streams over one TCP connection, header compression, push",
+          "It replaces TCP with UDP",
+          "It removes headers"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Which security services does TLS provide?",
+        "options": [
+          "Confidentiality, integrity, authenticity",
+          "Non-repudiation and DoS protection",
+          "Only confidentiality",
+          "All five"
+        ],
+        "answer": 0
+      },
+      {
+        "q": "Signing with the private key so anyone with the public key can verify it gives…",
+        "options": ["Confidentiality", "A digital signature", "A hash", "Symmetric encryption"],
+        "answer": 1
+      },
+      {
+        "q": "In 2015, MCS Holdings issued certificates for Google domains used in MITM attacks. Which weakness does this show?",
+        "options": [
+          "Self-signed certificates",
+          "Rogue certificate authorities",
+          "Broken MD5",
+          "Cookie theft"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  "final": [
+    {
+      "q": "A one-stylesheet change restyles an entire site. Which principle makes this possible?",
+      "options": ["Structure versus presentation", "Statelessness", "Idempotency", "Hoisting"],
+      "answer": 0
+    },
+    {
+      "q": "HTML stores \"Hello World!\" in 28 bytes vs 11,274 for Word. What does this illustrate?",
+      "options": ["HTML is compressed", "HTML is a very lightweight format", "Word is broken", "HTML has no structure"],
+      "answer": 1
+    },
+    {
+      "q": "A recipe page renders fine in HTML but nothing marks \"2 tablespoons\" as a quantity. What limitation does this show?",
+      "options": [
+        "HTML is designed for hypertext, not domain structure — the argument for XML",
+        "CSS is missing",
+        "The page isn't valid",
+        "JavaScript is disabled"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Inline style=\"color:red\" on one element is the \"ugly\" option. Why?",
+      "options": [
+        "It doesn't work",
+        "It applies to one element, can't be reused, and overrides nearly everything",
+        "It's slow",
+        "Browsers ignore it"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "An <i> inside <b> turns red even though no rule selects i. Why?",
+      "options": ["Specificity", "Inheritance from the enclosing b", "A browser default", "Hoisting"],
+      "answer": 1
+    },
+    {
+      "q": "A glyph Å might represent two different characters, or a sequence A + COMBINING RING. What does this imply?",
+      "options": [
+        "Comparing strings by appearance is unsafe",
+        "Unicode is broken",
+        "Fonts are code points",
+        "UTF-8 can't store Å"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why can't you index into a UTF-8 string by byte offset to land on the n-th character?",
+      "options": [
+        "UTF-8 is encrypted",
+        "Code points take 1–4 code units, so characters have variable length",
+        "UTF-8 is little-endian",
+        "Strings are immutable"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Reading the UTF-16 BOM back as 0xFFFE tells you the bytes are swapped. Why is this safe?",
+      "options": [
+        "0xFFFE is a common character",
+        "Unicode never assigns code point 65,534",
+        "UTF-16 has no BOM",
+        "Network order is little endian"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Network byte order is…",
+      "options": ["Little endian", "Big endian", "Undefined", "Mixed"],
+      "answer": 1
+    },
+    {
+      "q": "What does i18n stand for?",
+      "options": ["Localization", "Internationalization", "Multilingualization", "Integration"],
+      "answer": 1
+    },
+    {
+      "q": "A page needs JS to work at all, and a screen-reader user can't use it. Which principle was violated?",
+      "options": ["Fail-safe design", "Strict mode", "Idempotency", "Specificity"],
+      "answer": 0
+    },
+    {
+      "q": "A form's dropdown triggers a full page reload every time it changes. Which technique avoids this?",
+      "options": ["AJAX", "HTTP Basic auth", "Cookies", "Pipelining"],
+      "answer": 0
+    },
+    {
+      "q": "A loop uses var i inside a block, and i leaks outside the block. Why?",
+      "options": [
+        "var doesn't obey block scope",
+        "let leaks too",
+        "Hoisting of functions",
+        "Strict mode"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "if (0) {…} never runs. Why?",
+      "options": ["0 is falsy", "0 is undefined", "Syntax error", "0 is null"],
+      "answer": 0
+    },
+    {
+      "q": "\"5\" == 5 is true but \"5\" === 5 is false. Why?",
+      "options": [
+        "== coerces types; === also compares type",
+        "=== is buggy",
+        "Strings can't equal numbers",
+        "== compares references"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Inside inner(), console.log(a) prints 5 where a is declared in outer(). Why?",
+      "options": [
+        "a is global",
+        "Lexical scope — inner can see variables of its containing function",
+        "Hoisting",
+        "Callbacks"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A function declaration is called above its definition and works. Why?",
+      "options": [
+        "Function declarations are hoisted whole",
+        "JS runs bottom-up",
+        "Strict mode",
+        "It's an arrow function"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "How does JavaScript achieve inheritance without classes?",
+      "options": ["Prototypes", "Interfaces", "Mixins only", "It doesn't"],
+      "answer": 0
+    },
+    {
+      "q": "Assigning a second myButton.onclick handler makes the first one stop working. Why?",
+      "options": [
+        "The event property holds one handler; assigning a new one clobbers the old",
+        "Buttons only support one click",
+        "Strict mode",
+        "addEventListener was used"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "The event object property that says which element dispatched the event is…",
+      "options": ["type", "bubbles", "target", "cancelable"],
+      "answer": 2
+    },
+    {
+      "q": "Why pre-validate forms client-side?",
+      "options": [
+        "To replace server validation entirely",
+        "To reduce incorrect submissions and server load",
+        "To hide data",
+        "To speed up DNS"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "HTTP lives at which layer?",
+      "options": ["Application", "Transport", "Internet", "Network interface"],
+      "answer": 0
+    },
+    {
+      "q": "Two websites on different domains are served from one IP address. This is…",
+      "options": ["Load balancing", "Virtual hosting", "NAT", "Pipelining"],
+      "answer": 1
+    },
+    {
+      "q": "Ports 0–1023 are called…",
+      "options": ["Ephemeral ports", "Well-known (privileged) ports", "Private ports", "Dynamic ports"],
+      "answer": 1
+    },
+    {
+      "q": "In HTTP/1.1, the request line and header field names must be in…",
+      "options": ["UTF-8", "US-ASCII", "UTF-16", "Any encoding"],
+      "answer": 1
+    },
+    {
+      "q": "A browser sends Authorization: Basic … only after receiving which status?",
+      "options": ["200", "301", "401", "500"],
+      "answer": 2
+    },
+    {
+      "q": "Why is there no real \"log out\" with HTTP Basic auth?",
+      "options": [
+        "The browser keeps the credentials until it is closed",
+        "The server forgets them immediately",
+        "It uses cookies",
+        "It uses TLS"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "A response has Cache-Control: no-cache. What can a cache do?",
+      "options": [
+        "Nothing — it can't store it",
+        "Store it, but must revalidate with the server before each reuse",
+        "Serve it forever",
+        "Share it only with CDNs"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Why did browsers disable HTTP/1.1 pipelining in practice?",
+      "options": [
+        "Responses must come back in order, so one slow response blocks the rest",
+        "It was insecure",
+        "It used UDP",
+        "It required POST"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which HTTP version introduced one TCP connection with multiple streams?",
+      "options": ["HTTP/1.0", "HTTP/1.1", "HTTP/2", "HTTP/0.9"],
+      "answer": 2
+    },
+    {
+      "q": "Which is NOT a session management technique listed in the notes?",
+      "options": ["URL rewriting", "Hidden form fields", "Cookies", "Range requests"],
+      "answer": 3
+    },
+    {
+      "q": "Safe limits for cookies across all browsers are about…",
+      "options": [
+        "50 cookies and 4093 bytes per domain",
+        "1 cookie per domain",
+        "Unlimited",
+        "1 MB per cookie"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "How does TLS provide confidentiality?",
+      "options": [
+        "Public-key encryption of every message",
+        "Symmetric encryption with per-connection keys derived from a negotiated shared secret",
+        "Base64 encoding",
+        "MD5 hashing"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "How does TLS detect tampering with messages?",
+      "options": ["A message authentication code (MAC)", "Base64", "Sequence numbers", "Cookies"],
+      "answer": 0
+    },
+    {
+      "q": "A certificate is…",
+      "options": [
+        "A private key",
+        "A public key digitally signed by a trusted third party",
+        "A password hash",
+        "A session cookie"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A hash function is one-way. What does that mean?",
+      "options": [
+        "Easy to compute a hash; infeasible to create a document with a given hash",
+        "It can be reversed with the key",
+        "It encrypts symmetrically",
+        "It only works on text"
+      ],
+      "answer": 0
+    }
+  ]
+}

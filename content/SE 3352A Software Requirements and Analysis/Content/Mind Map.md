@@ -1,0 +1,3 @@
+A **mind map** combines drawing and text to mimic how the brain stores information: words and pictures are linked the way synapses connect ideas, branching out from one central concept.
+
+**Example:** a hand-drawn mind map for *Good Food for One*, a web business giving recipes, shopping advice and cooking tips to people who cook and eat alone. Branches off the central "Meals for One" include · recipes (printable, cooking instructions, shopping instructions) · search engine (by ingredient, kitchen equipment) · meal of the day · own profile · things I like / hate · "I'm vegetarian" · history of past meals · help and guidance · links to foodie sites · hints and tips.
